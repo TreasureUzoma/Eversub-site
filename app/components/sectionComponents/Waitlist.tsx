@@ -14,7 +14,7 @@ const Waitlist = () => {
               name="Email"
               id="email"
               placeholder="Enter your email"
-              className="rounded-xl p-3 text-[0.8rem] outline-none border focus:outline-1 focus:outline-myRed w-full max-w-[330px] md:max-w-[500px]"
+              className="rounded-xl p-3 text-[0.9rem] outline-none border focus:outline-1 focus:outline-myRed w-full max-w-[330px] md:max-w-[500px]"
             />
           </div>
           <button className="py-2 px-8 bg-myRed rounded-2xl font-semibold text-white text-[0.8rem]">
