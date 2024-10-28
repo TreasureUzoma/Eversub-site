@@ -7,7 +7,7 @@ const Hero = () => {
             <div className="my_fixed_width lg:w-[800px]">
                 <h1 className="text-[1.95rem] font-semibold">Pay bills, <span className="text-myRed">effortlessly</span>
                 </h1>
-                <p className="text-[0.9rem] my-2 mb-7 font-rubik">Experience the benefits of effortlessly bill payments with Eversub. Save time, reduce stress and gain financial clarity. Our platform streamlines your expenses, allowing you to focus on what matters most.</p>
+                <p className="text-[0.9rem] my-2 mb-7 font-rubik">Experience the benefits of effortlessly bill payments with Eversub. Save time, reduce stress and gain financial clarity. <span className="hidden md:inline">Our platform streamlines your expenses, allowing you to focus on what matters most.</span></p>
                 <Link className="bg-myRed rounded-2xl py-2 px-6 text-white font-semibold text-center text-[0.77rem]" href="/about">Learn more!</Link>
             </div>
         </div>
