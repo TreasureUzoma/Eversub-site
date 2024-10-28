@@ -8,9 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: "Poppins",
+        rubik: "Rubik",
+        grotesk: "Cabinet Grotesk"
+      },
+      backgroundColor: {
+        myWhite: "#fbfbfb",
+        myRed: "#fc4100",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        myRed: "#fc4100",
       },
     },
   },
