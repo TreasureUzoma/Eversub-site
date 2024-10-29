@@ -1,5 +1,5 @@
 import Nav from "./components/sectionComponents/Nav";
-import Hero from "./components/sectionComponents/Hero";
+import Hero from "./components/pagesComponets/Hero";
 import Waitlist from "./components/sectionComponents/Waitlist";
 import Footer from "./components/sectionComponents/Footer";
 

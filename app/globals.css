@@ -7,13 +7,14 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: Poppins;
-}
-
 body {
   background-color: #fbfbfb;
   color: #332941;
+  font-family: Poppins;
+}
+
+p {
+  font-family: rubik;  
 }
 
 .my_fixed_width {

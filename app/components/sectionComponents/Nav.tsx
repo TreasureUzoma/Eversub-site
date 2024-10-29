@@ -58,17 +58,17 @@ const Nav = ( {page=""}) => {
                 Terms
               </Link>
               <Link
-                href="/terms"
+                href="/faq"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "terms" ? "underline" : ""
+                  page == "faq" ? "underline" : ""
                 }`}
               >
                 FAQ
               </Link>
               <Link
-                href="/terms"
+                href="/contact"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "terms" ? "underline" : ""
+                  page == "contact" ? "underline" : ""
                 }`}
               >
                 Contact

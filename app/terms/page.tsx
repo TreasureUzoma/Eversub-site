@@ -5,7 +5,7 @@ import Link from "next/link";
 const termsPage = () => {
   return (
     <>
-      <Nav page="privacy" />
+      <Nav page="terms" />
       <div className="mt-[5.5rem]">
         <div className="flex justify-center">
             <div className="p-2 my_fixed_width pb-5 border-slate-800">
