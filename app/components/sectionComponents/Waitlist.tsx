@@ -1,6 +1,6 @@
 const Waitlist = () => {
   return (
-    <main className="flex justify-center text-center md:items-center md:min-h-[70vh]">
+    <main className="flex justify-center text-center md:items-center md:min-h-[55vh] lg:min-h-[80vh]">
       <div className="my_fixed_width lg:max-w-[750px]">
         <h2 className="text-[1.5rem] font-semibold">Join our waitlist!</h2>
         <p className="text-[0.82rem] my-2 mb-[2rem] font-rubik">
