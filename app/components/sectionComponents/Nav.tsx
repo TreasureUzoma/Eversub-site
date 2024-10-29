@@ -12,44 +12,112 @@ const Nav = ( {page=""}) => {
    }
 
   return (
-    <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-40 py-5 bg-myWhite">
-      <div className="flex justify-center w-full">
-        <div className="flex items-center justify-between my_fixed_width">
-          <h3 className="text-base font-bold font-grotesk">Eversub</h3>
-          <button onClick={handleNav} className="md:hidden">
-            {navOpen ? (
-              <i className="fa fa-times"></i>
-            ) : (
-              <i className="fa fa-bars"></i>
-            )}
-          </button>
-          <Link
-            href="/home"
-            className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-              page == "home" ? "underline" : ""
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-              page == "about" ? "underline" : ""
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            href="/privacy"
-            className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-              page == "privacy" ? "underline" : ""
-            }`}
-          >
-            Privacy
-          </Link>
+    <>
+      <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-40 py-5 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md">
+        <div className="flex justify-center w-full">
+          <div className="flex items-center justify-between my_fixed_width">
+            <h3 className="text-base font-bold font-grotesk">Eversub</h3>
+            <button onClick={handleNav} className="md:hidden">
+              {navOpen ? (
+                <i className="fa fa-times"></i>
+              ) : (
+                <i className="fa fa-bars"></i>
+              )}
+            </button>
+            <div className="flex items-center justify-between space-x-12 hidden md:inline-block">
+              <Link
+                href="/"
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                  page == "home" ? "underline" : ""
+                }`}
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                  page == "about" ? "underline" : ""
+                }`}
+              >
+                About
+              </Link>
+              <Link
+                href="/privacy"
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                  page == "privacy" ? "underline" : ""
+                }`}
+              >
+                Privacy
+              </Link>
+              <Link
+                href="/terms"
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                  page == "terms" ? "underline" : ""
+                }`}
+              >
+                Terms
+              </Link>
+              <Link
+                href="/terms"
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                  page == "terms" ? "underline" : ""
+                }`}
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/terms"
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                  page == "terms" ? "underline" : ""
+                }`}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Mobile navigation */}
+
+      {navOpen && (
+        <div className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-49 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8">
+          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center">
+            {/* Direct to my portfolio till web app is ready! */}
+            <a
+              href="https://treasuresureuzoma.netlify.app/"
+              className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2"
+            >
+              Get Started
+            </a>
+            <Link
+              href="/"
+              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+            >
+              Home
+            </Link>
+            <Link
+              href="/faq"
+              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/privacy"
+              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+            >
+              Privacy
+            </Link>
+            <Link
+              href="/terms"
+              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+            >
+              Terms
+            </Link>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
