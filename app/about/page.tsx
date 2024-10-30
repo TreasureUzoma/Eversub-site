@@ -1,6 +1,7 @@
 import Nav from "../components/sectionComponents/Nav";
 import Footer from "../components/sectionComponents/Footer";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
+import QuickLinksTwo from "../components/pagesComponets/QuickLinksTwo";
 
 const aboutPage = () => {
   return (
@@ -10,6 +11,7 @@ const aboutPage = () => {
         <HeroTwo pageName="About Us" bgColor="bg-[#fdeae6]"/>
         <div className="flex justify-center mt-[3rem]">
           <div className="p-2 my_fixed_width">
+            <QuickLinksTwo page="about"/>
             <h2 className="text-[1.3rem] font-semibold">Our Mission</h2>
             <p className="text-[0.95rem] my-2 mb-7">
               At Eversub, we aim to simplify subscription management, helping
@@ -18,7 +20,6 @@ const aboutPage = () => {
               users can get the most out of their subscriptions without the
               stress of manual tracking.
             </p>
-
             <h2 className="text-[1.3rem] font-semibold">Our Story</h2>
             <p className="text-[0.95rem] my-2 mb-7">
               Eversub was born out of the frustration of juggling multiple
