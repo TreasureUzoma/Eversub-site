@@ -82,13 +82,13 @@ const Nav = ( {page=""}) => {
 
       {navOpen && (
         <div className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-49 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8" onClick={handleNav}>
-          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center">
+          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2">
             {/* Direct to my portfolio till web app is ready! */}
             <a
               href="https://treasuresureuzoma.netlify.app/"
               className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2"
             >
-              Get Started
+             Sign Up
             </a>
             <Link
               href="/"
