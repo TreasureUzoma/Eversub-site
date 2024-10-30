@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <header className="my-[4rem] flex items-center min-h-[45vh] w-full md:min-h-[70vh] md:max-h-[600px] lg:min-h-[100vh]">
+    <header className="my-[4rem] flex items-center min-h-[45vh] w-full md:min-h-[65vh] md:max-h-[600px] lg:min-h-[90vh]">
         <div className="md:px-[3.7rem] flex items-center justify-center md:w-full md:text-center">
             <div className="my_fixed_width lg:w-[800px]">
                 <h1 className="text-[1.95rem] font-semibold">Pay bills, <span className="text-myRed bg-myRed px-2 rounded-2xl bg-opacity-10">effortlessly</span>
