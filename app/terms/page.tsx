@@ -8,7 +8,7 @@ const termsPage = () => {
   return (
     <>
       <Nav page="terms" />
-      <div className="mt-[4.8rem]">
+      <div className="mt-[4.75rem]">
         <HeroTwo pageName="Terms and Condtions" bgColor="bg-[#ebe3fb]" />
         <div className="flex justify-center mt-[3rem]">
           <div className="p-2 my_fixed_width">
@@ -18,7 +18,7 @@ const termsPage = () => {
               Effective Date: 26/12/2024
             </p>
 
-            <h2 className="text-[1rem] font-semibold">1. Introduction</h2>
+            <h2 className="text-[1.15rem] font-semibold">1. Introduction</h2>
             <p className="my-2 text-[0.9rem] mb-7">
               Welcome to <i>Eversub</i>. These Terms and Conditions govern your
               use of our website, applications, and related services
@@ -27,7 +27,7 @@ const termsPage = () => {
               please discontinue use of our Services.
             </p>
 
-            <h2 className="text-[1rem] font-semibold">2. User Obligations</h2>
+            <h2 className="text-[1.15rem] font-semibold">2. User Obligations</h2>
             <p className="my-2 text-[0.9rem] mb-7">
               As a user of Eversub, you agree to provide accurate information,
               comply with our guidelines, and respect other users. You are
@@ -35,7 +35,7 @@ const termsPage = () => {
               immediately of any unauthorized use.
             </p>
 
-            <h2 className="text-[1rem] font-semibold">3. Data Privacy</h2>
+            <h2 className="text-[1.15rem] font-semibold">3. Data Privacy</h2>
             <p className="my-2 text-[0.9rem] mb-7">
               We prioritize your data privacy and handle all personal
               information per our Privacy Policy. Your data will be used to
@@ -47,7 +47,7 @@ const termsPage = () => {
               .
             </p>
 
-            <h2 className="text-[1rem] font-semibold">4. Use of Services</h2>
+            <h2 className="text-[1.15rem] font-semibold">4. Use of Services</h2>
             <p className="my-2 text-[0.9rem] mb-7">
               Our Services include features like subscription management and
               personalized notifications. We grant you a limited,
@@ -55,7 +55,7 @@ const termsPage = () => {
               business purposes, as per the conditions outlined here.
             </p>
 
-            <h2 className="text-[1rem] font-semibold">5. Restrictions</h2>
+            <h2 className="text-[1.15rem] font-semibold">5. Restrictions</h2>
             <p className="my-2 text-[0.9rem] mb-7">
               You agree not to misuse the Services. Prohibited actions include
               reverse engineering, distributing unauthorized content, and using
@@ -63,7 +63,7 @@ const termsPage = () => {
               lead to suspension or termination of your access.
             </p>
 
-            <h2 className="text-[1rem] font-semibold">
+            <h2 className="text-[1.15rem] font-semibold">
               6. Liability Limitation
             </h2>
             <p className="my-2 text-[0.9rem] mb-7">
@@ -73,14 +73,14 @@ const termsPage = () => {
               by law.
             </p>
 
-            <h2 className="text-[1rem] font-semibold">7. Changes to Terms</h2>
+            <h2 className="text-[1.15rem] font-semibold">7. Changes to Terms</h2>
             <p className="my-2 text-[0.9rem] mb-7">
               We may update these Terms occasionally. We will notify you of any
               significant changes, and your continued use of the Services
               signifies acceptance of the updated Terms.
             </p>
 
-            <h2 className="text-[1rem] font-semibold">8. Contact Us</h2>
+            <h2 className="text-[1.15rem] font-semibold">8. Contact Us</h2>
             <p className="my-2 text-[0.9rem] mb-7">
               If you have questions or concerns regarding these Terms, please
               visit our{" "}

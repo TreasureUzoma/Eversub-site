@@ -9,14 +9,14 @@ const QuickLinks = ({ page='' }) => {
         <Link href="/privacy">
           <span
             className={`${
-              page === "privacy" ? "bg-myBlack text-white px-3" : "ml-2"
-            } inline-flex py-2 rounded-lg text-[0.8rem] space-x-4`}
+              page === "privacy" ? "bg-myBlack text-white px-3" : "ml-2 text-[0.8rem]"
+            } inline-flex py-2 rounded-lg space-x-4`}
           >
             <Icons
               type="link"
-              height={page === "privacy" ? "1.2rem" : "0.9rem"}
-              width={page === "privacy" ? "1.2rem" : "0.9rem"}
-              color={page === "privacy" ? "white" : "black"}
+              height={page === "privacy" ? "1.1rem" : "0.9rem"}
+              width={page === "privacy" ? "1.1rem" : "0.9rem"}
+              color={page === "privacy" ? "white" : "#332941"}
             />
             <span>Privacy Policy</span>
           </span>
@@ -24,14 +24,14 @@ const QuickLinks = ({ page='' }) => {
         <Link href="/terms">
           <span
             className={`${
-              page === "terms" ? "bg-myBlack text-white px-3" : "ml-2"
-            } inline-flex py-2 rounded-lg text-[0.8rem] space-x-4`}
+              page === "terms" ? "bg-myBlack text-white px-3" : "ml-2 text-[0.8rem]"
+            } inline-flex py-2 rounded-lg space-x-4`}
           >
             <Icons
               type="link"
-              height={page === "privacy" ? "1.2rem" : "0.9rem"}
-              width={page === "privacy" ? "1.2rem" : "0.9rem"}
-              color={page === "terms" ? "white" : "black"}
+              height={page === "terms" ? "1.1rem" : "0.9rem"}
+              width={page === "terms" ? "1.1rem" : "0.9rem"}
+              color={page === "terms" ? "white" : "#332941"}
             />
             <span>Terms & Condition</span>
           </span>
