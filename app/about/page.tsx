@@ -51,7 +51,7 @@ const aboutPage = () => {
 
             <h2 className="text-[1.3rem] font-semibold">Get in Touch</h2>
             <p className="my-2 mb-7">
-              We'd love to hear from you! Whether you have questions, feedback, or ideas, feel free
+              We&apos;d love to hear from you! Whether you have questions, feedback, or ideas, feel free
               to <a href="/contact" className="underline">contact us</a>. Join us on this journey to make 
               subscription management better and simpler.
             </p>
