@@ -16,11 +16,13 @@ const config: Config = {
       backgroundColor: {
         myWhite: "#fbfbfb",
         myRed: "#fc4100",
+        myBlack: "#332941",
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         myRed: "#fc4100",
+        myBlack: "#332941",
       },
     },
   },

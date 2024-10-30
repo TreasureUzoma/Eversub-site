@@ -1,6 +1,8 @@
 
 import Nav from "../components/sectionComponents/Nav";
 import Footer from "../components/sectionComponents/Footer";
+import HeroTwo from "../components/pagesComponets/HeroTwo";
+import QuickLinks from "../components/pagesComponets/QuickLinks";
 import Link from "next/link";
 
 const privacyPage = () => {
@@ -8,19 +10,17 @@ const privacyPage = () => {
     <>
       <Nav page="privacy" />
       <div className="mt-[5.5rem]">
-        <div className="flex justify-center">
-          <div className="p-2 my_fixed_width pb-5 border-slate-800">
-            <h1 className="text-2xl font-semibold">Privacy Policy for Eversub</h1>
-            <p className="my-4 font-semibold">
-              Learn about how your data is handled at Eversub.
-            </p>
-            <p className="my-4 font-semibold text-sm">
-              Effective Date: December 22, 2024
-            </p>
-          </div>
-        </div>
+        <HeroTwo pageName="Privacy Policy" bgColor="bg-[#e0eff1]" />
         <div className="flex justify-center mt-[3rem]">
           <div className="p-2 my_fixed_width">
+            <QuickLinks  page="privacy"/>
+            <h2 className="text-[1rem] font-semibold">
+              Eversub Privacy Policy
+            </h2>
+            <p className="my-2 text-[0.9rem] mb-7">
+              Effective Date: 26/12/2024
+            </p>
+
             <h2 className="text-[1.3rem] font-semibold">Introduction</h2>
             <p className="my-2 mb-7">
               Welcome to <i>Eversub</i>. This Privacy Policy explains how we
