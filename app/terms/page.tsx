@@ -9,7 +9,7 @@ const termsPage = () => {
       <div className="mt-[5.5rem]">
         <div className="flex justify-center">
           <div className="p-2 my_fixed_width pb-5 border-slate-800">
-            <h1 className="text-2xl font-semibold">Terms and Conditions</h1>
+            <h1 className="text-2xl font-semibold">Terms and Conditions for Eversub</h1>
             <p className="my-4 font-semibold">
               Please review our Terms and Conditions for using Eversub.
             </p>
@@ -58,7 +58,7 @@ const termsPage = () => {
               6. Liability Limitation
             </h2>
             <p className="my-2 mb-7">
-              Eversub is not liable for any damages arising from the use or inability to use the Services. We provide the Services "as is" and disclaim all warranties to the extent permitted by law.
+              Eversub is not liable for any damages arising from the use or inability to use the Services. We provide the Services <q>as is</q> and disclaim all warranties to the extent permitted by law.
             </p>
 
             <h2 className="text-[1.3rem] font-semibold">
