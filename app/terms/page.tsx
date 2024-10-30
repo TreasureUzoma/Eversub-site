@@ -8,7 +8,7 @@ const termsPage = () => {
   return (
     <>
       <Nav page="terms" />
-      <div className="mt-[4.75rem]">
+      <div className="mt-0">
         <HeroTwo pageName="Terms and Condtions" bgColor="bg-[#ebe3fb]" />
         <div className="flex justify-center mt-[3rem]">
           <div className="p-2 my_fixed_width">
