@@ -81,7 +81,7 @@ const Nav = ( {page=""}) => {
       {/* Mobile navigation */}
 
       {navOpen && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-49 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-49 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8" onClick={handleNav}>
           <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center">
             {/* Direct to my portfolio till web app is ready! */}
             <a
@@ -103,6 +103,12 @@ const Nav = ( {page=""}) => {
               FAQ
             </Link>
             <Link
+              href="/about"
+              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+            >
+              About
+            </Link>
+            <Link
               href="/privacy"
               className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
             >
@@ -113,6 +119,12 @@ const Nav = ( {page=""}) => {
               className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
             >
               Terms
+            </Link>
+            <Link
+              href="/contact"
+              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+            >
+              Contact
             </Link>
           </div>
         </div>
