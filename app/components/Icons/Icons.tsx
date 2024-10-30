@@ -31,7 +31,7 @@ const Icons = ({
         </svg>
       );
    default:
-      null;
+      return null;
   }
 };
 
