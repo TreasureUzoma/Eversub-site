@@ -37,24 +37,59 @@ const privacyPage = () => {
             <h3 className="text-[1rem] font-semibold">
               a. Personal Information
             </h3>
-            <p className="my-2 mb-7">
+            <p className="my-2">
               When you sign up for our waitlist, create an account, or use
               certain features, we may collect the followwing personal
               information information:
             </p>
-            <ol className="font-rubik text-[0.9rem]">
+            <ol className="font-rubik text-[0.92rem] list-disc pl-4 mb-4">
               <li>Name</li>
-              <li>Email address</li>
+              <li>Contact information</li>
+              <li>Date of Birth</li>
+              <li>Payment information (when making payments)</li>
+            </ol>
+            <h3 className="text-[1rem] font-semibold">
+              b. Automatically Collected Information
+            </h3>
+            <p className="my-2">
+              We may collect certain information automatically when you use our
+              Services, such as:
+            </p>
+            <ol className="font-rubik text-[0.92rem] list-disc pl-4 mb-7">
+              <li>
+                Device Information (e.g., IP address, browser type, and version)
+              </li>
+              <li>
+                Usage data (e.g., page viewed, time spent on pages, links
+                clicked)
+              </li>
+              <li>Date of Birth</li>
             </ol>
 
             <h3 className="text-[1.3rem] font-semibold">
-              Why we ask for your data
+              2. How We Use Your Information
             </h3>
-            <p className="my-2 mb-7">
-              Lorem ipsum dolor sit amen do si fi lorem ipsum dolor sit amen
-              lorem ipsum dolor sit amenlorem ipsum dolor sit amenlorem ipsum
-              dolor sit amenlorem ipsum dolor sit amenlorem ipsum dolor sit amen
+            <p className="my-2">
+              We may collect certain information automatically when you use our
+              Services, such as:
             </p>
+            <ol className="font-rubik text-[0.92rem] list-disc pl-4 mb-7">
+              <li>
+                <b>Account Management:</b> To create and manage your account.
+              </li>
+              <li>
+                <b>Service Delivery:</b> To facilitate payment of your bills and subscriptions.
+              </li>
+              <li>
+                <b>Communication:</b> To send notifications, updates, and other information related to your account and Services.
+              </li>
+              <li>
+                <b>Marketting:</b> To send promotional messages (youmay opt-out at any time).
+              </li>
+              <li>
+                <b>Compliance:</b> To comply with applicable laws, regulations, and legal.
+              </li>
+            </ol>
 
             <h3 className="text-[1.3rem] font-semibold">Our Services</h3>
             <p className="my-2 mb-7">
