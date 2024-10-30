@@ -1,6 +1,5 @@
 import Nav from "../components/sectionComponents/Nav";
 import Footer from "../components/sectionComponents/Footer";
-import Image from "next/image";
 
 const aboutPage = () => {
   return (
