@@ -4,7 +4,7 @@ import Icons from "../Icons/Icons";
 const QuickLinks = ({ page='' }) => {
   return (
     <section>
-      <h4 className="text-[1rem] my-5 font-semibold">Quick Links <Icons type="home" width="2rem" height="2rem" color="black" /></h4>
+      <h4 className="text-[1rem] my-5 font-semibold">Quick Links</h4>
       <div className="border-l-2 border-myBlack flex flex-col pl-4 py-4 mb-9 text-[0.9rem] space-y-2">
         <Link href="/privacy">
           <span
