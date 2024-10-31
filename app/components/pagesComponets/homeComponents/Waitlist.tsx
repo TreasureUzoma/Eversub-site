@@ -12,41 +12,48 @@ const Waitlist: React.FC = () => {
 
   // Submit form handler
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
-    e.preventDefault();
-    setErrorMessage("");
-    setSuccessMessage("");
-    setLoading(true);
+  e.preventDefault();
+  setErrorMessage("");
+  setSuccessMessage("");
+  setLoading(true);
 
-    if (!isValidEmail(email)) {
-      setErrorMessage("Please enter a valid email address.");
-      setLoading(false);
-      return;
-    }
+  if (!isValidEmail(email)) {
+    setErrorMessage("Please enter a valid email address.");
+    setLoading(false);
+    return;
+  }
 
-    try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+  try {
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
 
-      if (!response.ok) {
-        throw new Error("Failed to add email");
-      }
-
-      setSuccessMessage("Successfully added to the waitlist!");
-      setEmail("");
-    } catch (error) {
-      console.log(error)
+    if (!response.ok) {
+      const errorData = await response.json();
       
-      setErrorMessage("An error occurred. Please try again later.");
-    } finally {
-      setLoading(false);
+      if (response.status === 409) {
+        setErrorMessage(errorData.error); // Show specific error for duplicate email
+      } else {
+        setErrorMessage("An error occurred. Please try again later.");
+      }
+      
+      throw new Error("Failed to add email");
     }
-  };
 
+    setSuccessMessage("Successfully added to the waitlist!");
+    setEmail("");
+  } catch (error) {
+    console.log(error);
+    if (!errorMessage) setErrorMessage("An error occurred. Please try again later.");
+  } finally {
+    setLoading(false);
+  }
+};
+                           
   return (
     <main className="flex justify-center text-center md:items-center md:min-h-[55vh] lg:min-h-[80vh]">
       <div className="my_fixed_width lg:max-w-[750px]">
