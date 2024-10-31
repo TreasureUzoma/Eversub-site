@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
+
 const Nav = ( {page=""}) => {
    const [navOpen, setNavOpen] = useState(false);
 
@@ -85,9 +86,9 @@ const Nav = ( {page=""}) => {
             {/* Direct to my portfolio till web app is ready! */}
             <a
               href="https://treasuresureuzoma.netlify.app/"
-              className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2"
+              className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2 w-full"
             >
-             Sign Up
+            Get Started
             </a>
             <Link
               href="/"

@@ -37,14 +37,16 @@ const Hero = () => {
         <div className="my_fixed_width lg:w-[800px]">
           <h1 className="text-[1.95rem] font-semibold">
             Pay bills,{" "}
-            <mark className="text-myRed bg-myRed px-2 rounded-2xl bg-opacity-10">
+            <mark className="text-myRed bg-myRed px-2 rounded-2xl bg-opacity-10 inline-block">
               {text}
             </mark>
           </h1>
           <p className="text-[0.95rem] my-2 mb-7 font-rubik">
-            Experience the benefits of effortless bill payments with Eversub. Save time, reduce stress, and gain financial clarity.
+            Experience the benefits of effortless bill payments with Eversub.
+            Save time, reduce stress, and gain financial clarity.
             <span className="hidden md:inline">
-              Our platform streamlines your expenses, allowing you to focus on what matters most.
+              Our platform streamlines your expenses, allowing you to focus on
+              what matters most.
             </span>
           </p>
           <Link
