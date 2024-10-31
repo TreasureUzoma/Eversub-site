@@ -39,6 +39,8 @@ const Waitlist: React.FC = () => {
       setSuccessMessage("Successfully added to the waitlist!");
       setEmail("");
     } catch (error) {
+      console.log(error)
+      
       setErrorMessage("An error occurred. Please try again later.");
     } finally {
       setLoading(false);
