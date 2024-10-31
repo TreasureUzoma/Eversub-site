@@ -1,15 +1,14 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
 
+const Nav = ({ page = "" }) => {
+  const [navOpen, setNavOpen] = useState(false);
 
-const Nav = ( {page=""}) => {
-   const [navOpen, setNavOpen] = useState(false);
-
-   const handleNav = () => {
-    setNavOpen(prev => !prev);
-   }
+  const handleNav = () => {
+    setNavOpen((prev) => !prev);
+  };
 
   return (
     <>
@@ -28,7 +27,7 @@ const Nav = ( {page=""}) => {
               <Link
                 href="/"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "home" ? "underline" : ""
+                  page === "home" ? "underline" : ""
                 }`}
               >
                 Home
@@ -36,7 +35,7 @@ const Nav = ( {page=""}) => {
               <Link
                 href="/about"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "about" ? "underline" : ""
+                  page === "about" ? "underline" : ""
                 }`}
               >
                 About
@@ -44,7 +43,7 @@ const Nav = ( {page=""}) => {
               <Link
                 href="/privacy"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "privacy" ? "underline" : ""
+                  page === "privacy" ? "underline" : ""
                 }`}
               >
                 Privacy
@@ -52,7 +51,7 @@ const Nav = ( {page=""}) => {
               <Link
                 href="/terms"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "terms" ? "underline" : ""
+                  page === "terms" ? "underline" : ""
                 }`}
               >
                 Terms
@@ -60,7 +59,7 @@ const Nav = ( {page=""}) => {
               <Link
                 href="/faq"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "faq" ? "underline" : ""
+                  page === "faq" ? "underline" : ""
                 }`}
               >
                 FAQ
@@ -68,7 +67,7 @@ const Nav = ( {page=""}) => {
               <Link
                 href="/contact"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page == "contact" ? "underline" : ""
+                  page === "contact" ? "underline" : ""
                 }`}
               >
                 Contact
@@ -79,50 +78,64 @@ const Nav = ( {page=""}) => {
       </nav>
 
       {/* Mobile navigation */}
-
       {navOpen && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-49 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8" onClick={handleNav}>
+        <div
+          className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-49 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8"
+          onClick={handleNav}
+        >
           <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2">
             {/* Direct to my portfolio till web app is ready! */}
             <a
               href="https://treasuresureuzoma.netlify.app/"
               className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2 w-full"
             >
-            Get Started
+              Sign Up
             </a>
             <Link
               href="/"
-              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+              className={`rounded-3xl block border border-[2px] ${
+                page === "home" ? "border-myRed" : "border-white"
+              } text-sm font-semibold py-2 px-6 text-white my-2`}
             >
               Home
             </Link>
             <Link
               href="/faq"
-              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+              className={`rounded-3xl block border border-[2px] ${
+                page === "faq" ? "border-myRed" : "border-white"
+              } text-sm font-semibold py-2 px-6 text-white my-2`}
             >
               FAQ
             </Link>
             <Link
               href="/about"
-              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+              className={`rounded-3xl block border border-[2px] ${
+                page === "about" ? "border-myRed" : "border-white"
+              } text-sm font-semibold py-2 px-6 text-white my-2`}
             >
               About
             </Link>
             <Link
               href="/privacy"
-              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+              className={`rounded-3xl block border border-[2px] ${
+                page === "privacy" ? "border-myRed" : "border-white"
+              } text-sm font-semibold py-2 px-6 text-white my-2`}
             >
               Privacy
             </Link>
             <Link
               href="/terms"
-              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+              className={`rounded-3xl block border border-[2px] ${
+                page === "terms" ? "border-myRed" : "border-white"
+              } text-sm font-semibold py-2 px-6 text-white my-2`}
             >
               Terms
             </Link>
             <Link
               href="/contact"
-              className={`rounded-3xl block border border-[2px] border-white text-sm font-semibold py-2 px-6 text-white my-2`}
+              className={`rounded-3xl block border border-[2px] ${
+                page === "contact" ? "border-myRed" : "border-white"
+              } text-sm font-semibold py-2 px-6 text-white my-2`}
             >
               Contact
             </Link>
