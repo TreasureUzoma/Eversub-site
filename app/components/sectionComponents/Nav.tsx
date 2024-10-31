@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 
-
 const Nav = ( {page=""}) => {
    const [navOpen, setNavOpen] = useState(false);
 
