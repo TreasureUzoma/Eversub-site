@@ -11,7 +11,7 @@ const Waitlist: React.FC = () => {
   const isValidEmail = (email: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   // Submit form handler
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
   e.preventDefault();
   setErrorMessage("");
   setSuccessMessage("");
@@ -32,28 +32,28 @@ const Waitlist: React.FC = () => {
       body: JSON.stringify({ email }),
     });
 
+    // Check the response status to handle errors appropriately
+    const data = await response.json();
+
     if (!response.ok) {
-      const errorData = await response.json();
-      
       if (response.status === 409) {
-        setErrorMessage(errorData.error); // Show specific error for duplicate email
+        setErrorMessage(data.error); // Specific message for existing email
       } else {
         setErrorMessage("An error occurred. Please try again later.");
       }
-      
-      throw new Error("Failed to add email");
+      return;
     }
 
     setSuccessMessage("Successfully added to the waitlist!");
     setEmail("");
   } catch (error) {
-    console.log(error);
-    if (!errorMessage) setErrorMessage("An error occurred. Please try again later.");
+    console.log("Fetch error:", error);
+    setErrorMessage("An error occurred. Please try again later.");
   } finally {
     setLoading(false);
   }
 };
-                           
+
   return (
     <main className="flex justify-center text-center md:items-center md:min-h-[55vh] lg:min-h-[80vh]">
       <div className="my_fixed_width lg:max-w-[750px]">
