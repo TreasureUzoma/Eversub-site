@@ -14,12 +14,12 @@ const Page: React.FC = () => {
     <>
       <Nav page="faq" />
       <div>
-        <HeroTwo pageName="Frequently Asked Questions" bgColor="bg-green-200" />
+        <HeroTwo pageName="Frequently Asked Questions" bgColor="bg-green-100" />
         <div className="flex justify-center mt-[3rem]">
           <div className="p-2 my_fixed_width">
             <QuickLinksTwo page="faq" />
             <h2 className="text-[1rem] font-semibold mb-4">You have questions? We have answers!</h2>
-            <div className="my-5 space-y-4">
+            <div className="my-5">
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>What is Eversub?</AccordionTrigger>
@@ -60,13 +60,13 @@ const Page: React.FC = () => {
                 <AccordionItem value="item-7">
                   <AccordionTrigger>Can I set up automatic payments?</AccordionTrigger>
                   <AccordionContent>
-                    Yes, you can enable automatic payments for recurring bills in the "Settings" section.
+                    Yes, you can enable automatic payments for recurring bills in the <q>Settings</q> section.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-8">
                   <AccordionTrigger>How do I update my subscription details?</AccordionTrigger>
                   <AccordionContent>
-                    Go to your subscriptions list, select the subscription, and click "Edit" to make updates.
+                    Go to your subscriptions list, select the subscription, and click <q>Edit</q> to make updates.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-9">
@@ -78,7 +78,7 @@ const Page: React.FC = () => {
                 <AccordionItem value="item-10">
                   <AccordionTrigger>Can I cancel a subscription through the app?</AccordionTrigger>
                   <AccordionContent>
-                    You can cancel any subscription directly from the app by going to the "Subscriptions" section.
+                    You can cancel any subscription directly from the app by going to the <q>Settings</q> page.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-11">

@@ -83,9 +83,11 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
           <button
             type="submit"
             disabled={loading}
-            className={`py-2 px-8 rounded-2xl font-semibold text-white text-[0.8rem] ${loading ? 'bg-orange-700' : 'bg-myRed hover:bg-orange-700'} transition-colors`}
+            className={`py-2 px-8 rounded-2xl font-semibold text-white text-[0.8rem] ${
+              loading ? "bg-orange-700" : "bg-myRed hover:bg-orange-700"
+            } transition-colors`}
           >
-            {loading ? 'Joining...' : 'Join Now'}
+            {loading ? "Joining..." : "Join Now"}
           </button>
         </form>
       </div>
