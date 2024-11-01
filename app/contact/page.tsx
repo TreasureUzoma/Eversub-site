@@ -152,7 +152,7 @@ const ContactPage = () => {
                 <div>
                   <h2 className="font-semibold text-[1.2rem]">Get In Touch</h2>
                   <p className="text-[0.9rem] mt-1">
-                    We want to hear from you. Let's know how we can help
+                    We want to hear from you. Let&apos;s know how we can help
                   </p>
                 </div>
                 <div>
