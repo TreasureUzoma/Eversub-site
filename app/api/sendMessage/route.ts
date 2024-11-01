@@ -1,31 +1,72 @@
 import { NextResponse } from "next/server";
 
+// restrict to my domain
+const ALLOWED_ORIGIN = "https://eversub.vercel.app";
+
 export async function POST(request: Request) {
-    try {
-        const { name, email, message } = await request.json();
+  const origin = request.headers.get("origin");
 
-        const telegramBotToken = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN;
-        const telegramChatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+  // Restrict requests to the allowed origin
+  if (origin !== ALLOWED_ORIGIN) {
+    return NextResponse.json(
+      { error: "Access denied." },
+      { status: 403 }
+    );
+  }
 
-        const telegramMessage = `
-        New Message :)        
-        Name: ${name}
-        Email: ${email}
-        Message: ${message}
-      `;
+  try {
+    const { name, email, message } = await request.json();
 
-      const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(telegramMessage)}`;
-      await fetch(telegramUrl, { method: "GET" });
+    // Improved validation checks with refined regex
+    const nameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ\s'-]{1,100}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const messageRegex = /^[\w\s.,!?'"-]{5,1000}$/;
+
+    if (
+      !nameRegex.test(name) ||
+      !emailRegex.test(email) ||
+      !messageRegex.test(message)
+    ) {
+      return NextResponse.json(
+        { error: "Invalid input data." },
+        { status: 400 }
+      );
     }
-    catch (error) {
-        console.error("Error sending message", error);
-        
-        return NextResponse.json(
-          {
-            error:
-              "There was a problem while sending  your message. Please try again later.",
-          },
-          { status: 500 }
-        );
-   }
+
+    // Telegram message and sending logic
+    const telegramBotToken = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN;
+    const telegramChatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+
+    if (!telegramBotToken || !telegramChatId) {
+      return NextResponse.json(
+        { error: "Server configuration error." },
+        { status: 500 }
+      );
+    }
+
+    const telegramMessage = `
+      New Message :)\nName: ${name}\nEmail: ${email}\nMessage: ${message}
+    `;
+
+    const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(
+      telegramMessage
+    )}`;
+
+    const telegramResponse = await fetch(telegramUrl, { method: "GET" });
+
+    if (!telegramResponse.ok) {
+      throw new Error("Failed to send message to Telegram.");
+    }
+
+    return NextResponse.json(
+      { message: "Message sent successfully" },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error("Error in POST handler:", error);
+    return NextResponse.json(
+      { error: "There was a problem while sending your message." },
+      { status: 500 }
+    );
+  }
 }

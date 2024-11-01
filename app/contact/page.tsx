@@ -1,12 +1,11 @@
-"use client"
-
+"use client";
 import { useState, FormEvent } from "react";
-import Nav from "../components/sectionComponents/Nav"
-import HeroTwo from "../components/pagesComponets/HeroTwo"
-import QuickLinksTwo from "../components/pagesComponets/QuickLinksTwo"
-import Footer from "../components/sectionComponents/Footer"
+import Nav from "../components/sectionComponents/Nav";
+import HeroTwo from "../components/pagesComponets/HeroTwo";
+import QuickLinksTwo from "../components/pagesComponets/QuickLinksTwo";
+import Footer from "../components/sectionComponents/Footer";
 
-const contactPage = () => {
+const ContactPage = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -14,21 +13,25 @@ const contactPage = () => {
   const [successMessage, setSuccessMessage] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
-  // validation
-  const isValidName = (name: string): boolean => /^[a-zA-Z]+([ ]+[a-zA-Z]+)*$/.test(name);
+  const isValidName = (name: string): boolean =>
+    /^[a-zA-Z]+([ ]+[a-zA-Z]+)*$/.test(name);
   const isValidEmail = (email: string): boolean =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  const isValidMessage = (message: string): boolean => /^[a-zA-Z]+([ ]+[a-zA-Z]+)*$/.test(message);
+  const isValidMessage = (message: string): boolean =>
+    message.trim().length > 0;
 
-  //submit handler 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     setLoading(true);
     setErrorMessage("");
     setSuccessMessage("");
 
-    // checks 
-    if (!isValidName(name) && !isValidEmail(email) && !isValidMessage(message)) {
+    // Validation checks
+    if (
+      !isValidName(name) ||
+      !isValidEmail(email) ||
+      !isValidMessage(message)
+    ) {
       setErrorMessage("Please fill in all fields.");
       setLoading(false);
       return;
@@ -43,23 +46,27 @@ const contactPage = () => {
         body: JSON.stringify({ name, email, message }),
       });
 
-      // Check the response status to handle errors
       const data = await response.json();
+
       if (!response.ok) {
-        setErrorMessage("An error occurred. Please try again later.");
-        return;
+        // Handle error response
+        setErrorMessage(
+          data.error || "An error occurred. Please try again later."
+        );
+      } else {
+        // Handle success response
+        setSuccessMessage(data.message);
+        setName("");
+        setEmail("");
+        setMessage("");
       }
-      setSuccessMessage("Message sent successfully");
-      setName("");
-      setEmail("");
-      setMessage("");
     } catch (error) {
       console.log("Fetch error:", error);
       setErrorMessage("An error occurred. Please try again later.");
     } finally {
       setLoading(false);
     }
-  }
+  };
 
   return (
     <>
@@ -137,7 +144,7 @@ const contactPage = () => {
                 )}
                 <div>
                   <button className="bg-myRed text-white font-semibold text-[0.9rem] block rounded-xl w-full py-2 mt-3">
-                  {loading ? "Sending..." : "Send"}
+                    {loading ? "Sending..." : "Send"}
                   </button>
                 </div>
               </form>
@@ -145,7 +152,7 @@ const contactPage = () => {
                 <div>
                   <h2 className="font-semibold text-[1.2rem]">Get In Touch</h2>
                   <p className="text-[0.9rem] mt-1">
-                    We want to hear from you. Let&apos;s know how we can help
+                    We want to hear from you. Let's know how we can help
                   </p>
                 </div>
                 <div>
@@ -158,7 +165,7 @@ const contactPage = () => {
                     >
                       eversubsupport@gmail.com
                     </a>{" "}
-                    for enquires and questions
+                    for inquiries and questions
                   </p>
                 </div>
                 <div>
@@ -181,6 +188,6 @@ const contactPage = () => {
       <Footer />
     </>
   );
-}
+};
 
-export default contactPage
+export default ContactPage;
