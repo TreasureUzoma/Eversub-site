@@ -24,7 +24,7 @@ const QuickLinksTwo = ({ page='' }) => {
         <Link href="/faq">
           <span
             className={`${
-              page === "terms" ? "bg-myBlack text-white px-3" : "ml-2 text-[0.8rem]"
+              page === "faq" ? "bg-myBlack text-white px-3" : "ml-2 text-[0.8rem]"
             } inline-flex py-2 rounded-lg space-x-4`}
           >
             <Icons
@@ -34,6 +34,21 @@ const QuickLinksTwo = ({ page='' }) => {
               color={page === "faq" ? "white" : "#332941"}
             />
             <span>Frequently Asked Questions</span>
+          </span>
+        </Link>
+        <Link href="/faq">
+          <span
+            className={`${
+              page === "contact" ? "bg-myBlack text-white px-3" : "ml-2 text-[0.8rem]"
+            } inline-flex py-2 rounded-lg space-x-4`}
+          >
+            <Icons
+              type="link"
+              height={page === "contact" ? "1.1rem" : "0.9rem"}
+              width={page === "contact" ? "1.1rem" : "0.9rem"}
+              color={page === "contact" ? "white" : "#332941"}
+            />
+            <span>Contact Us</span>
           </span>
         </Link>
       </div>

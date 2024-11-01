@@ -9,7 +9,7 @@ const privacyPage = () => {
   return (
     <>
       <Nav page="privacy" />
-      <div className="md:mt-0">
+      <div>
         <HeroTwo pageName="Privacy Policy" bgColor="bg-[#e0eff1]" />
         <div className="flex justify-center mt-[3rem]">
           <div className="p-2 my_fixed_width">
