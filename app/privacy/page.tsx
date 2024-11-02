@@ -120,7 +120,7 @@ const privacyPage = () => {
             </p>
 
             <h2 className="text-[1.15rem] font-semibold">5. Contact Us</h2>
-            <p className="my-2 text-[0.9rem]mb-7">
+            <p className="my-2 text-[0.9rem] mb-7">
               If you have questions or concerns about this Privacy Policy or
               your data, please reach out to us via our{" "}
               <Link href="/contact" className="underline">
