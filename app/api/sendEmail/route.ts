@@ -6,7 +6,7 @@ import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
 const isValidEmail = (email: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 // Define your allowed origin
-const ALLOWED_ORIGIN = "https://eversub.vercel.app/contact";
+const ALLOWED_ORIGIN = "https://eversub.vercel.app";
 
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");

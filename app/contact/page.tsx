@@ -5,7 +5,11 @@ import HeroTwo from "../components/pagesComponets/HeroTwo";
 import QuickLinksTwo from "../components/pagesComponets/QuickLinksTwo";
 import Footer from "../components/sectionComponents/Footer";
 
+import { useToast } from "@/hooks/use-toast";
+
 const ContactPage = () => {
+  const { toast } = useToast();
+
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -50,19 +54,30 @@ const ContactPage = () => {
 
       if (!response.ok) {
         // Handle error response
-        setErrorMessage(
-          data.error || "An error occurred. Please try again later."
-        );
+        toast({
+          title: "Something went wrong",
+          variant: "destructive",
+          description:
+            data.error || "An error occurred. Please try again later.",
+        });
       } else {
         // Handle success response
-        setSuccessMessage(data.message);
+        toast({
+          title: "Success!",
+          variant: "success",
+          description: data.message,
+        });
         setName("");
         setEmail("");
         setMessage("");
       }
     } catch (error) {
       console.log("Fetch error:", error);
-      setErrorMessage("An error occurred. Please try again later.");
+      toast({
+        title: "Something went wrong",
+        variant: "destructive",
+        description: "An error occurred. Please try again later.",
+      });
     } finally {
       setLoading(false);
     }

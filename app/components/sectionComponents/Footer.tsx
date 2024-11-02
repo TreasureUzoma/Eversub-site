@@ -8,7 +8,7 @@ const Footer = () => {
           <h3 className="text-base font-bold font-grotesk">Eversub</h3>
           <div className="flex justify-between items-center gap-3">
             <a
-              href="#"
+              href="https://www.x.com/useeversub"
               target="_blank"
               className="bg-myRed bg-opacity-10 w-8 h-8 hover:bg-orange-500 hover:text-white rounded-full text-myRed flex justify-center items-center text-sm"
             >

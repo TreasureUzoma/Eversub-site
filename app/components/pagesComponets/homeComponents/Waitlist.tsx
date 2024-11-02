@@ -1,58 +1,77 @@
-"use client"
+"use client";
 import { useState, FormEvent } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Waitlist: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [successMessage, setSuccessMessage] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-
+  const { toast } = useToast();
   // Email validation
-  const isValidEmail = (email: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isValidEmail = (email: string): boolean =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   // Submit form handler
-const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
-  e.preventDefault();
-  setErrorMessage("");
-  setSuccessMessage("");
-  setLoading(true);
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    e.preventDefault();
+    setErrorMessage("");
+    setSuccessMessage("");
+    setLoading(true);
 
-  if (!isValidEmail(email)) {
-    setErrorMessage("Please enter a valid email address.");
-    setLoading(false);
-    return;
-  }
-
-  try {
-    const response = await fetch('/api/sendEmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email }),
-    });
-
-    // Check the response status to handle errors appropriately
-    const data = await response.json();
-
-    if (!response.ok) {
-      if (response.status === 409) {
-        setErrorMessage(data.error); // Specific message for existing email
-      } else {
-        setErrorMessage("An error occurred. Please try again later.");
-      }
+    if (!isValidEmail(email)) {
+      setErrorMessage("Please enter a valid email address.");
+      setLoading(false);
       return;
     }
 
-    setSuccessMessage("Successfully added to the waitlist!");
-    setEmail("");
-  } catch (error) {
-    console.log("Fetch error:", error);
-    setErrorMessage("An error occurred. Please try again later.");
-  } finally {
-    setLoading(false);
-  }
-};
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      // Check the response status to handle errors appropriately
+      const data = await response.json();
+
+      if (!response.ok) {
+        if (response.status === 409) {
+          // Specific message for existing email
+          toast({
+            title: "Email already added",
+            variant: "destructive",
+            description: data.error,
+          });
+        } else {
+          toast({
+            title: "Oh no!",
+            description: "An error occurred. Please try again later.",
+            variant: "destructive",
+          });
+        }
+        return;
+      }
+
+      toast({
+        title: "Success",
+        description: "Succesfylly added to the waitlist!",
+        variant: "success",
+      });
+      setEmail("");
+    } catch (error) {
+      console.log("Fetch error:", error);
+      toast({
+        title: "Oh no!",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <main className="flex justify-center text-center md:items-center md:min-h-[55vh] lg:min-h-[80vh]">
