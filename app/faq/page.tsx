@@ -19,7 +19,7 @@ const Page: React.FC = () => {
           <div className="p-2 my_fixed_width">
             <QuickLinksTwo page="faq" />
             <h2 className="text-[1rem] font-semibold mb-4">You have questions? We have answers!</h2>
-            <div className="my-5">
+            <div className="my-6">
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>What is Eversub?</AccordionTrigger>

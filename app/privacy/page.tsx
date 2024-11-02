@@ -17,12 +17,12 @@ const privacyPage = () => {
             <h2 className="text-[1rem] font-semibold">
               Eversub Privacy Policy
             </h2>
-            <p className="my-2 text-[0.95rem] text-[0.95rem] mb-7">
+            <p className="my-2 text-[0.9rem] text-[0.9rem] mb-7">
               Effective Date: 26/12/2024
             </p>
 
             <h2 className="text-[1.15rem] font-semibold">Introduction</h2>
-            <p className="my-2 text-[0.95rem] mb-7">
+            <p className="my-2 text-[0.9rem] mb-7">
               Welcome to <i>Eversub</i>. This Privacy Policy explains how we
               collect, use, disclose, and protect information about you when you
               use our website, application, and any other products and services
@@ -37,7 +37,7 @@ const privacyPage = () => {
             <h3 className="text-[1rem] font-semibold">
               a. Personal Information
             </h3>
-            <p className="my-2 text-[0.95rem]">
+            <p className="my-2 text-[0.9rem]">
               When you sign up for our waitlist, create an account, or use
               certain features, we may collect the following personal
               information:
@@ -52,7 +52,7 @@ const privacyPage = () => {
             <h3 className="text-[1rem] font-semibold">
               b. Automatically Collected Information
             </h3>
-            <p className="my-2 text-[0.95rem]">
+            <p className="my-2 text-[0.9rem]">
               We may collect certain information automatically when you use our
               Services, such as:
             </p>
@@ -96,7 +96,7 @@ const privacyPage = () => {
             </ol>
 
             <h2 className="text-[1.15rem] font-semibold">3. Our Services</h2>
-            <p className="my-2 text-[0.95rem] mb-7">
+            <p className="my-2 text-[0.9rem] mb-7">
               Eversub provides a convenient way to manage and pay your bills and
               subscriptions all in one place. Our platform helps simplify
               financial tasks by offering tools to track payment schedules,
@@ -108,7 +108,7 @@ const privacyPage = () => {
             <h2 className="text-[1.15rem] font-semibold">
               4. How Your Data Is Stored
             </h2>
-            <p className="my-2 text-[0.95rem] mb-7">
+            <p className="my-2 text-[0.9rem] mb-7">
               Your data is securely stored using industry-standard encryption
               and security practices. We utilize secure servers and databases to
               protect your personal information from unauthorized access,
@@ -120,7 +120,7 @@ const privacyPage = () => {
             </p>
 
             <h2 className="text-[1.15rem] font-semibold">5. Contact Us</h2>
-            <p className="my-2 text-[0.95rem]mb-7">
+            <p className="my-2 text-[0.9rem]mb-7">
               If you have questions or concerns about this Privacy Policy or
               your data, please reach out to us via our{" "}
               <Link href="/contact" className="underline">
