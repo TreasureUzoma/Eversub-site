@@ -14,8 +14,8 @@ const QuickLinksTwo = ({ page='' }) => {
           >
             <Icons
               type="link"
-              height={page === "about" ? "1.1rem" : "0.9rem"}
-              width={page === "about" ? "1.1rem" : "0.9rem"}
+              height={page === "about" ? "1.05rem" : "0.9rem"}
+              width={page === "about" ? "1.05rem" : "0.9rem"}
               color={page === "about" ? "white" : "#332941"}
             />
             <span>About Us</span>
@@ -29,8 +29,8 @@ const QuickLinksTwo = ({ page='' }) => {
           >
             <Icons
               type="link"
-              height={page === "faq" ? "1.1rem" : "0.9rem"}
-              width={page === "faq" ? "1.1rem" : "0.9rem"}
+              height={page === "faq" ? "1.05rem" : "0.9rem"}
+              width={page === "faq" ? "1.05rem" : "0.9rem"}
               color={page === "faq" ? "white" : "#332941"}
             />
             <span>Frequently Asked Questions</span>
@@ -44,8 +44,8 @@ const QuickLinksTwo = ({ page='' }) => {
           >
             <Icons
               type="link"
-              height={page === "contact" ? "1.1rem" : "0.9rem"}
-              width={page === "contact" ? "1.1rem" : "0.9rem"}
+              height={page === "contact" ? "1.05rem" : "0.9rem"}
+              width={page === "contact" ? "1.05rem" : "0.9rem"}
               color={page === "contact" ? "white" : "#332941"}
             />
             <span>Contact Us</span>

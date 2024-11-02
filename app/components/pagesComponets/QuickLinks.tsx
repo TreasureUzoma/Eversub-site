@@ -14,8 +14,8 @@ const QuickLinks = ({ page='' }) => {
           >
             <Icons
               type="link"
-              height={page === "privacy" ? "1.1rem" : "0.9rem"}
-              width={page === "privacy" ? "1.1rem" : "0.9rem"}
+              height={page === "privacy" ? "1.05rem" : "0.9rem"}
+              width={page === "privacy" ? "1.05rem" : "0.9rem"}
               color={page === "privacy" ? "white" : "#332941"}
             />
             <span>Privacy Policy</span>
@@ -29,8 +29,8 @@ const QuickLinks = ({ page='' }) => {
           >
             <Icons
               type="link"
-              height={page === "terms" ? "1.1rem" : "0.9rem"}
-              width={page === "terms" ? "1.1rem" : "0.9rem"}
+              height={page === "terms" ? "1.05rem" : "0.9rem"}
+              width={page === "terms" ? "1.05rem" : "0.9rem"}
               color={page === "terms" ? "white" : "#332941"}
             />
             <span>Terms & Condition</span>

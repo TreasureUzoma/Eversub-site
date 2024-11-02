@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="mt-8 flex justify-center py-[3rem] md:mt-0 bg-myRed bg-opacity-10">
+    <footer className="mt-12 flex justify-center py-[3rem] md:mt-0 bg-myRed bg-opacity-10">
       <div className="my_fixed_width">
         <div className="flex items-center justify-between">
           <h3 className="text-base font-bold font-grotesk">Eversub</h3>
@@ -10,21 +10,21 @@ const Footer = () => {
             <a
               href="#"
               target="_blank"
-              className="bg-myRed bg-opacity-10 w-7 h-7 hover:bg-orange-500 hover:text-white rounded-full text-myRed flex justify-center items-center text-sm"
+              className="bg-myRed bg-opacity-10 w-8 h-8 hover:bg-orange-500 hover:text-white rounded-full text-myRed flex justify-center items-center text-sm"
             >
               <i className="fab fa-twitter"></i>
             </a>
             <a
               href="#"
               target="_blank"
-              className="bg-myRed bg-opacity-10 w-7 h-7 hover:bg-orange-500 hover:text-white rounded-full text-myRed flex justify-center items-center text-sm"
+              className="bg-myRed bg-opacity-10 w-8 h-8 hover:bg-orange-500 hover:text-white rounded-full text-myRed flex justify-center items-center text-sm"
             >
               <i className="fab fa-instagram"></i>
             </a>
             <a
               href="#"
               target="_blank"
-              className="bg-myRed bg-opacity-10 w-7 h-7 hover:bg-orange-500 hover:text-white rounded-full text-myRed flex justify-center items-center text-sm"
+              className="bg-myRed bg-opacity-10 w-8 h-8 hover:bg-orange-500 hover:text-white rounded-full text-myRed flex justify-center items-center text-sm"
             >
               <i className="fab fa-facebook"></i>
             </a>
