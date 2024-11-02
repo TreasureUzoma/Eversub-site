@@ -13,10 +13,6 @@ body {
   font-family: Poppins;
 }
 
-p {
-  font-family: rubik;  
-}
-
 .my_fixed_width {
   width: 83%;
   max-width: 1200px;

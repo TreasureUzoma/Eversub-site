@@ -58,7 +58,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     <main className="flex justify-center text-center md:items-center md:min-h-[55vh] lg:min-h-[80vh]">
       <div className="my_fixed_width lg:max-w-[750px]">
         <h2 className="text-[1.5rem] font-semibold">Join our waitlist!</h2>
-        <p className="text-[0.95rem] my-2 mb-[2rem] font-rubik">
+        <p className="text-[0.95rem] my-2 mb-[2rem]">
           Signup for our waitlist, be among the first to signup when Eversub
           minimum viable product is available.
         </p>

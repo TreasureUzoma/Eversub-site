@@ -42,7 +42,7 @@ const privacyPage = () => {
               certain features, we may collect the following personal
               information:
             </p>
-            <ol className="font-rubik text-[0.92rem] list-disc pl-4 mb-4">
+            <ol className="text-[0.92rem] list-disc pl-4 mb-4">
               <li>Name</li>
               <li>Contact information</li>
               <li>Date of Birth</li>
@@ -56,7 +56,7 @@ const privacyPage = () => {
               We may collect certain information automatically when you use our
               Services, such as:
             </p>
-            <ol className="font-rubik text-[0.92rem] list-disc pl-4 mb-7">
+            <ol className="text-[0.92rem] list-disc pl-4 mb-7">
               <li>
                 Device Information (e.g., IP address, browser type, and version)
               </li>
@@ -73,7 +73,7 @@ const privacyPage = () => {
               We use the collected information to improve your experience with
               our Services, as described below:
             </p>
-            <ol className="font-rubik text-[0.92rem] list-disc pl-4 mb-7">
+            <ol className="text-[0.92rem] list-disc pl-4 mb-7">
               <li>
                 <b>Account Management:</b> To create and manage your account.
               </li>
