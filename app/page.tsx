@@ -5,12 +5,12 @@ import Footer from "./components/sectionComponents/Footer";
 
 const page = () => {
   return (
-    <div>
+    <>
       <Nav page="home" />
       <Hero />
       <Waitlist />
       <Footer />
-    </div>
+    </>
   );
 };
 

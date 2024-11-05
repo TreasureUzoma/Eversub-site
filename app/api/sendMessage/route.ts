@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     const { name, email, message } = await request.json();
 
     // Improved validation checks with refined regex
-    const nameRegex =  /^[\w\s.,!?'"-]{2,1000}$/
+    const nameRegex = /^[\w\s.,!?'"-]{2,1000}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const messageRegex = /^[\w\s.,!?'"-]{2,1000}$/;
 

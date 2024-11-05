@@ -2,7 +2,6 @@
 import { useState, FormEvent } from "react";
 import Nav from "../components/sectionComponents/Nav";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
-import QuickLinksTwo from "../components/pagesComponets/QuickLinksTwo";
 import Footer from "../components/sectionComponents/Footer";
 
 import { useToast } from "@/hooks/use-toast";
@@ -18,7 +17,7 @@ const ContactPage = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const isValidName = (name: string): boolean =>
-    /^[a-zA-Z]+([ ]+[a-zA-Z]+)*$/.test(name);
+    /^[\w\s.,!?'"-]{2,1000}$/.test(name);
   const isValidEmail = (email: string): boolean =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isValidMessage = (message: string): boolean =>
@@ -90,14 +89,13 @@ const ContactPage = () => {
         <HeroTwo pageName="Contact Us!" bgColor="bg-yellow-100" />
         <div className="flex justify-center mt-[3rem]">
           <div className="p-2 my_fixed_width">
-            <QuickLinksTwo page="contact" />
             <h3 className="text-base font-semibold">
               Here to give you all the support you need.
             </h3>
             <div className="my-6 flex justify-center place-items-center w-full gap-8 md:gap-6 flex-col md:grid md:grid-cols-2">
               <form
                 onSubmit={handleSubmit}
-                className="bg-myRed bg-opacity-10 p-5 py-7 rounded-2xl flex flex-col gap-y-3 w-full"
+                className="bg-myRed bg-opacity-10 p-5 py-7 rounded-2xl flex flex-col gap-y-4 w-full"
               >
                 <div>
                   <label
@@ -146,7 +144,7 @@ const ContactPage = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Message"
-                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none border focus:border-myRed resize-none"
+                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none h-[10rem] border focus:border-myRed resize-none"
                   ></textarea>
                 </div>
                 {errorMessage && (
@@ -163,7 +161,7 @@ const ContactPage = () => {
                   </button>
                 </div>
               </form>
-              <div className="bg-orange-500 p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
+              <div className="bg-[#a62b00] p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
                 <div>
                   <h2 className="font-semibold text-[1.2rem]">Get In Touch</h2>
                   <p className="text-[0.9rem] mt-1">

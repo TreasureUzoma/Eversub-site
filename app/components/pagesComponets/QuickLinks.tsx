@@ -9,14 +9,16 @@ const QuickLinks = ({ page='' }) => {
         <Link href="/privacy">
           <span
             className={`${
-              page === "privacy" ? "bg-myBlack text-white px-3" : "ml-2 text-[0.8rem]"
+              page === "privacy"
+                ? "bg-myBlack text-white px-3"
+                : "ml-2 text-[0.8rem]"
             } inline-flex py-2 rounded-lg space-x-4`}
           >
             <Icons
               type="link"
               height={page === "privacy" ? "1.05rem" : "0.9rem"}
               width={page === "privacy" ? "1.05rem" : "0.9rem"}
-              color={page === "privacy" ? "white" : "#332941"}
+              color="white"
             />
             <span>Privacy Policy</span>
           </span>
@@ -24,14 +26,16 @@ const QuickLinks = ({ page='' }) => {
         <Link href="/terms">
           <span
             className={`${
-              page === "terms" ? "bg-myBlack text-white px-3" : "ml-2 text-[0.8rem]"
+              page === "terms"
+                ? "bg-myBlack text-white px-3"
+                : "ml-2 text-[0.8rem]"
             } inline-flex py-2 rounded-lg space-x-4`}
           >
             <Icons
               type="link"
               height={page === "terms" ? "1.05rem" : "0.9rem"}
               width={page === "terms" ? "1.05rem" : "0.9rem"}
-              color={page === "terms" ? "white" : "#332941"}
+              color="white"
             />
             <span>Terms & Condition</span>
           </span>

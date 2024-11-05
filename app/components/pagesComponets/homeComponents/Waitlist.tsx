@@ -1,6 +1,7 @@
 "use client";
 import { useState, FormEvent } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Toaster } from "@/components/ui/toaster";
 
 const Waitlist: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -75,6 +76,7 @@ const Waitlist: React.FC = () => {
 
   return (
     <main className="flex justify-center text-center md:items-center md:min-h-[55vh] lg:min-h-[80vh]">
+      <Toaster />
       <div className="my_fixed_width lg:max-w-[750px]">
         <h2 className="text-[1.5rem] font-semibold">Join our waitlist!</h2>
         <p className="text-[0.95rem] my-2 mb-[2rem]">
