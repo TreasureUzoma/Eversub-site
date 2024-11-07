@@ -35,7 +35,7 @@ const ContactPage = () => {
       !isValidEmail(email) ||
       !isValidMessage(message)
     ) {
-      setErrorMessage("Please fill in all fields.");
+      setErrorMessage("Please fill in all fields correctly.");
       setLoading(false);
       return;
     }
@@ -95,7 +95,7 @@ const ContactPage = () => {
             <div className="my-6 flex justify-center place-items-center w-full gap-8 md:gap-6 flex-col md:grid md:grid-cols-2">
               <form
                 onSubmit={handleSubmit}
-                className="bg-myRed bg-opacity-10 p-5 py-7 rounded-2xl flex flex-col gap-y-4 w-full"
+                className="bg-myRed bg-opacity-20 p-5 py-7 rounded-2xl flex flex-col gap-y-4 w-full"
               >
                 <div>
                   <label
@@ -161,7 +161,7 @@ const ContactPage = () => {
                   </button>
                 </div>
               </form>
-              <div className="bg-[#a62b00] p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
+              <div className="bg-orange-600 p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
                 <div>
                   <h2 className="font-semibold text-[1.2rem]">Get In Touch</h2>
                   <p className="text-[0.9rem] mt-1">

@@ -42,7 +42,7 @@ const Hero = () => {
               {text}
             </mark>
           </h1>
-          <p className="text-[0.95rem] my-2 mb-7">
+          <p className="text-[0.95rem] font-medium my-2 mb-7">
             Experience the benefits of effortless bill payments with Eversub.
             Save time, reduce stress, and gain financial clarity.
             <span className="hidden md:inline">
