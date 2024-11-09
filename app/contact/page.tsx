@@ -111,7 +111,7 @@ const ContactPage = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name"
-                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none border focus:border-myRed"
+                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none focus:boder border focus:border-myRed"
                   />
                 </div>
                 <div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="example@mail.com"
-                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none border focus:border-myRed"
+                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none focus:boder border focus:border-myRed"
                   />
                 </div>
                 <div>
@@ -144,7 +144,7 @@ const ContactPage = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Message"
-                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none h-[10rem] border focus:border-myRed resize-none"
+                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none h-[10rem] focus:border focus:border-myRed resize-none"
                   ></textarea>
                 </div>
                 {errorMessage && (
@@ -161,7 +161,7 @@ const ContactPage = () => {
                   </button>
                 </div>
               </form>
-              <div className="bg-orange-600 p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
+              <div className="bg-orange-700 p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
                 <div>
                   <h2 className="font-semibold text-[1.2rem]">Get In Touch</h2>
                   <p className="text-[0.9rem] mt-1">
@@ -169,7 +169,7 @@ const ContactPage = () => {
                   </p>
                 </div>
                 <div>
-                  <h2 className="font-semibold text-[1.1rem]">Email Us</h2>
+                  <h2 className="font-semibold text-[1.1rem] focus:boder border">Email Us</h2>
                   <p className="text-[0.9rem] mt-1">
                     Say hello to us at{" "}
                     <a
