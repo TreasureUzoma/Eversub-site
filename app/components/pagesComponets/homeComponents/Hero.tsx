@@ -1,36 +1,9 @@
 "use client"
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
-  const words = ["effortlessly", "seamlessly", "quickly", "securely", "with ease"];
-  const typingSpeed = 100; // Typing speed per character
-  const delayBetweenWords = 1500; // Pause before typing the next word
-
-  const [text, setText] = useState("");
-  const [wordIndex, setWordIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-
-  useEffect(() => {
-    if (charIndex < words[wordIndex].length) {
-      const typingTimeout = setTimeout(() => {
-        setText((prev) => prev + words[wordIndex][charIndex]);
-        setCharIndex((prev) => prev + 1);
-      }, typingSpeed);
-
-      return () => clearTimeout(typingTimeout);
-    } else {
-      // Word complete, reset after a delay to start typing the next word
-      const wordDelayTimeout = setTimeout(() => {
-        setCharIndex(0);
-        setText("");
-        setWordIndex((prev) => (prev + 1) % words.length); // Loop through words
-      }, delayBetweenWords);
-
-      return () => clearTimeout(wordDelayTimeout);
-    }
-  }, [charIndex, wordIndex]);
 
   return (
     <header className="my-[4rem] flex items-center min-h-[45vh] w-full md:min-h-[65vh] md:max-h-[600px] lg:min-h-[90vh] my-[3.6rem]">
@@ -39,9 +12,26 @@ const Hero = () => {
           <h1 className="text-[1.95rem] font-semibold">
             Pay bills,{" "}
             <mark className="text-myRed bg-myRed px-2 rounded-2xl bg-opacity-10 inline-block">
-              {text}
+              <TypeAnimation
+                sequence={[
+                  "effortlessly",
+                  1700,
+                  "seamlessly",
+                  1700,
+                  "quickly",
+                  1700,
+                  "securely",
+                  1700,
+                  "with ease",
+                  1700,
+                  
+                ]}
+                speed={5}
+                repeat={Infinity}
+              />
             </mark>
           </h1>
+
           <p className="text-[0.9rem] font-medium my-2 mb-7">
             Experience the benefits of effortless bill payments with Eversub.
             Save time, reduce stress, and gain financial clarity.
