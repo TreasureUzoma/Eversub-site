@@ -88,7 +88,7 @@ const ContactPage = () => {
       <div>
         <HeroTwo pageName="Contact Us!" bgColor="bg-yellow-100" />
         <div className="flex justify-center mt-[3rem]">
-          <div className="p-2 my_fixed_width">
+          <div className="py-2 my_fixed_width">
             <h3 className="text-base font-semibold">
               Here to give you all the support you need.
             </h3>
@@ -100,7 +100,7 @@ const ContactPage = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="text-[0.9rem] font-semibold mb-2"
+                    className="text-[0.93rem] font-semibold mb-2"
                   >
                     Your Name
                   </label>
@@ -111,13 +111,13 @@ const ContactPage = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name"
-                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none focus:boder border focus:border-myRed"
+                    className="block w-full p-2 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-[0.9rem] font-semibold mb-2"
+                    className="text-[0.93rem] font-semibold mb-2"
                   >
                     Your Email
                   </label>
@@ -128,13 +128,13 @@ const ContactPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="example@mail.com"
-                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none focus:boder border focus:border-myRed"
+                    className="block w-full p-2 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="text-[0.9rem] font-semibold mb-2"
+                    className="text-[0.93rem] font-semibold mb-2"
                   >
                     Your Message
                   </label>
@@ -144,7 +144,7 @@ const ContactPage = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Message"
-                    className="block w-full p-2 text-[0.85rem] rounded-lg outline-none h-[10rem] focus:border focus:border-myRed resize-none"
+                    className="block w-full p-2 text-[0.91rem] rounded-lg outline-none h-[8.5rem] focus:border focus:border-myRed resize-none"
                   ></textarea>
                 </div>
                 {errorMessage && (
@@ -161,7 +161,7 @@ const ContactPage = () => {
                   </button>
                 </div>
               </form>
-              <div className="bg-orange-700 p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
+              <div className="bg-red-600 p-5 rounded-2xl text-white flex flex-col gap-y-4 w-full py-7">
                 <div>
                   <h2 className="font-semibold text-[1.2rem]">Get In Touch</h2>
                   <p className="text-[0.9rem] mt-1">
@@ -169,7 +169,7 @@ const ContactPage = () => {
                   </p>
                 </div>
                 <div>
-                  <h2 className="font-semibold text-[1.1rem] focus:boder border">Email Us</h2>
+                  <h2 className="font-semibold text-[1.1rem]">Email Us</h2>
                   <p className="text-[0.9rem] mt-1">
                     Say hello to us at{" "}
                     <a
