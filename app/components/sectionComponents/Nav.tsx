@@ -23,7 +23,7 @@ const Nav = ({ page = "" }) => {
                 <i className="fa fa-bars"></i>
               )}
             </button>
-            <div className="flex items-center justify-between space-x-12 hidden md:inline-block">
+            <div className="flex items-center justify-between space-x-7 hidden lg:space-x-10 md:inline-block">
               <Link
                 href="/"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
@@ -72,6 +72,12 @@ const Nav = ({ page = "" }) => {
               >
                 Contact
               </Link>
+              <a
+                href="https://treasuresureuzoma.netlify.app/"
+                className="rounded-3xl ml-2 border border-[2px] border-myRed bg-myRed text-sm font-semibold py-1 px-5 text-white"
+              >
+                Get Started
+              </a>
             </div>
           </div>
         </div>
@@ -83,7 +89,7 @@ const Nav = ({ page = "" }) => {
           className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-40 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8"
           onClick={handleNav}
         >
-          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full">
+          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full sm:grid-cols-3">
             {/* Direct to my portfolio till web app is ready! */}
             <a
               href="https://treasuresureuzoma.netlify.app/"

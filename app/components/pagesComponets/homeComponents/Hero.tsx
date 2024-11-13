@@ -36,7 +36,7 @@ const Hero = () => {
             Experience the benefits of effortless bill payments with Eversub.
             Save time, reduce stress, and gain financial clarity.
             <span className="hidden md:inline">
-              Our platform streamlines your expenses, allowing you to focus on
+              &nbsp;Our platform streamlines your expenses, allowing you to focus on
               what matters most.
             </span>
           </p>

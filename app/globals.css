@@ -15,7 +15,7 @@ body {
 
 .my_fixed_width {
   width: 83%;
-  max-width: 1200px;
+  max-width: 1260px;
 }
 
 ::selection {
@@ -26,4 +26,17 @@ body {
   :root {
     --radius: 0.5rem;
   }
+}
+
+@media (min-width:500px) {
+  .my_fixed_width {
+    width: 89%;
+    max-width: 1260px;
+  }  
+}
+@media (min-width:600px) {
+  .my_fixed_width {
+    width: 88%;
+    max-width: 1260px;
+  }  
 }

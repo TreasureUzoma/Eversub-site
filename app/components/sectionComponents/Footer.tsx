@@ -58,7 +58,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <p className="text-center text-[0.95rem] mt-[4rem]">
+        <p className="text-center text-[0.91rem] mt-[4rem]">
           &copy; Copyright 2024,
           <br /> All Right Reserved
         </p>
