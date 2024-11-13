@@ -78,7 +78,7 @@ const Waitlist: React.FC = () => {
   };
 
   return (
-    <main className="flex justify-center text-center items-center min-h-[55vh] md:min-h-[65vh] lg:min-h-[80vh]">
+    <main className="flex justify-center text-center items-center h-[41.6rem]">
       <Toaster />
       <div ref={ref} className="my_fixed_width lg:max-w-[750px]">
         {/* Heading with Animation */}
@@ -86,7 +86,7 @@ const Waitlist: React.FC = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={headingVariants}
-          className="text-[1.5rem] font-semibold"
+          className="text-[1.5rem] font-semibold sm:text-[2.3rem]"
         >
           Join our waitlist!
         </motion.h2>

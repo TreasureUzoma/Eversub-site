@@ -74,7 +74,7 @@ const Nav = ({ page = "" }) => {
               </Link>
               <a
                 href="https://treasuresureuzoma.netlify.app/"
-                className="rounded-3xl ml-2 border border-[2px] border-myRed bg-myRed text-sm font-semibold py-1 px-5 text-white"
+                className="rounded-3xl ml-2 border border-[2px] border-myRed bg-myRed text-sm font-semibold py-1 px-5 text-white text-[0.8rem]"
               >
                 Get Started
               </a>

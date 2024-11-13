@@ -3,7 +3,7 @@ const HeroTwo = ({ pageName="", bgColor="" }) => {
     <header
       className={`flex ${bgColor} items-center justify-center h-[21rem] md:h-screen md:max-h-[750px] lg:min-h-screen`}
     >
-      <h1 className="text-[1.5rem] font-semibold max-w-[65%] text-center">
+      <h1 className="text-[1.5rem] font-semibold max-w-[65%] text-center md:text-[2.2rem]">
         {pageName}
       </h1>
     </header>

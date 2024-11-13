@@ -1,6 +1,4 @@
 import { NextResponse } from "next/server";
-import dotenv from "dotenv";
-dotenv.config();
 
 // Define allowed origin
 const ALLOWED_ORIGIN = "https://eversub.vercel.app";
