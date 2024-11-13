@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 
-// restrict to my domain
+// Define allowed origin
 const ALLOWED_ORIGIN = "https://eversub.vercel.app";
 
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
 
-  // Restrict requests to the allowed origin
+  // Check for allowed origin
   if (origin !== ALLOWED_ORIGIN) {
     return NextResponse.json(
       { error: "Access denied." },
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 
-    // Improved validation checks with refined regex
+    // Refined regex for validation
     const nameRegex = /^[\w\s.,!?'"-]{2,1000}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const messageRegex = /^[\w\s.,!?'"-]{2,1000}$/;
@@ -33,9 +33,9 @@ export async function POST(request: Request) {
       );
     }
 
-    // Telegram message and sending logic
-    const telegramBotToken = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN;
-    const telegramChatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+    // Fetch Telegram configuration
+    const telegramBotToken = process.env.TELEGRAM_TOKEN;
+    const telegramChatId = process.env.TELEGRAM_CHAT_ID;
 
     if (!telegramBotToken || !telegramChatId) {
       return NextResponse.json(
@@ -44,17 +44,15 @@ export async function POST(request: Request) {
       );
     }
 
-    const telegramMessage = `
-      New Message :)\nName: ${name}\nEmail: ${email}\nMessage: ${message}
-    `;
-
-    const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(
-      telegramMessage
-    )}`;
+    // Construct the Telegram message
+    const telegramMessage = `New Message :)\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(telegramMessage)}`;
 
     const telegramResponse = await fetch(telegramUrl, { method: "GET" });
 
     if (!telegramResponse.ok) {
+      const errorText = await telegramResponse.text();
+      console.error("Telegram API error:", errorText);
       throw new Error("Failed to send message to Telegram.");
     }
 

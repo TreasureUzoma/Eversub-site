@@ -17,12 +17,15 @@ const Footer = () => {
   return (
     <footer className="mt-12 flex justify-center py-[3rem] md:mt-0 bg-myRed bg-opacity-10">
       <div className="my_fixed_width">
-        <div className="flex items-center justify-between">
+        <motion.div
+          className="flex items-center justify-between"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* Animated Logo */}
           <motion.h3
             className="text-base font-bold font-grotesk"
-            initial="hidden"
-            animate="visible"
             custom={0}
             variants={itemVariants}
           >
@@ -32,8 +35,6 @@ const Footer = () => {
           {/* Animated Social Icons */}
           <motion.div
             className="flex justify-between items-center gap-3"
-            initial="hidden"
-            animate="visible"
             custom={0.2}
             variants={itemVariants}
           >
@@ -59,13 +60,14 @@ const Footer = () => {
               <i className="fab fa-facebook"></i>
             </a>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Animated Description */}
         <motion.p
           className="text-[0.9rem] py-6"
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
           custom={0.4}
           variants={itemVariants}
         >
@@ -78,7 +80,8 @@ const Footer = () => {
           <motion.div
             className="flex flex-col gap-4"
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true }}
             custom={0.6}
             variants={itemVariants}
           >
@@ -96,7 +99,8 @@ const Footer = () => {
           <motion.div
             className="flex flex-col gap-4"
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true }}
             custom={0.8}
             variants={itemVariants}
           >
@@ -114,7 +118,8 @@ const Footer = () => {
         <motion.p
           className="text-center text-[0.91rem] mt-[4rem]"
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
           custom={1}
           variants={itemVariants}
         >
