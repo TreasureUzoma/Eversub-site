@@ -95,12 +95,12 @@ const ContactPage = () => {
             <div className="my-6 flex justify-center place-items-center w-full gap-8 md:gap-6 flex-col md:grid md:grid-cols-2">
               <form
                 onSubmit={handleSubmit}
-                className="bg-myRed bg-opacity-20 p-5 py-7 rounded-2xl flex flex-col gap-y-4 w-full"
+                className="bg-myRed bg-opacity-10 p-5 py-7 rounded-2xl flex flex-col gap-y-4 w-full"
               >
                 <div>
                   <label
                     htmlFor="name"
-                    className="text-[0.93rem] font-semibold mb-2"
+                    className="text-[0.93rem] font-semibold mb-3"
                   >
                     Your Name
                   </label>
@@ -111,13 +111,13 @@ const ContactPage = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name"
-                    className="block w-full p-2 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
+                    className="block w-full px-2 py-3 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-[0.93rem] font-semibold mb-2"
+                    className="text-[0.93rem] font-semibold mb-3"
                   >
                     Your Email
                   </label>
@@ -128,13 +128,13 @@ const ContactPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="example@mail.com"
-                    className="block w-full p-2 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
+                    className="block w-full px-2 py-3 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="text-[0.93rem] font-semibold mb-2"
+                    className="text-[0.93rem] font-semibold mb-3"
                   >
                     Your Message
                   </label>
@@ -144,7 +144,7 @@ const ContactPage = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Message"
-                    className="block w-full p-2 text-[0.91rem] rounded-lg outline-none h-[8.5rem] focus:border focus:border-myRed resize-none"
+                    className="block w-full px-2 py-3 text-[0.91rem] rounded-lg outline-none h-[8.5rem] focus:border focus:border-myRed resize-none"
                   ></textarea>
                 </div>
                 {errorMessage && (
