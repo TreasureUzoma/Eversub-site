@@ -1,12 +1,42 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+// Variants for sequential animations with delay
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay, duration: 0.8, ease: "easeOut" },
+  }),
+};
 
 const Footer = () => {
   return (
     <footer className="mt-12 flex justify-center py-[3rem] md:mt-0 bg-myRed bg-opacity-10">
       <div className="my_fixed_width">
         <div className="flex items-center justify-between">
-          <h3 className="text-base font-bold font-grotesk">Eversub</h3>
-          <div className="flex justify-between items-center gap-3">
+          {/* Animated Logo */}
+          <motion.h3
+            className="text-base font-bold font-grotesk"
+            initial="hidden"
+            animate="visible"
+            custom={0}
+            variants={itemVariants}
+          >
+            Eversub
+          </motion.h3>
+
+          {/* Animated Social Icons */}
+          <motion.div
+            className="flex justify-between items-center gap-3"
+            initial="hidden"
+            animate="visible"
+            custom={0.2}
+            variants={itemVariants}
+          >
             <a
               href="https://www.x.com/useeversub"
               target="_blank"
@@ -28,15 +58,30 @@ const Footer = () => {
             >
               <i className="fab fa-facebook"></i>
             </a>
-          </div>
+          </motion.div>
         </div>
 
-        <p className="text-[0.9rem] py-6">
+        {/* Animated Description */}
+        <motion.p
+          className="text-[0.9rem] py-6"
+          initial="hidden"
+          animate="visible"
+          custom={0.4}
+          variants={itemVariants}
+        >
           Eversub is a cutting-edge platform designed to simplify and streamline
-          subsicription payments for individuals and businesses.
-        </p>
+          subscription payments for individuals and businesses.
+        </motion.p>
+
+        {/* Animated Link Sections */}
         <div className="grid gap-3 grid-cols-2 mt-4">
-          <div className="flex flex-col gap-4">
+          <motion.div
+            className="flex flex-col gap-4"
+            initial="hidden"
+            animate="visible"
+            custom={0.6}
+            variants={itemVariants}
+          >
             <p className="font-semibold text-[1.05rem]">Company</p>
             <Link className="text-[0.9rem]" href="/about">
               About Us
@@ -47,8 +92,14 @@ const Footer = () => {
             <Link className="text-[0.9rem]" href="/contact">
               Contact Us
             </Link>
-          </div>
-          <div className="flex flex-col gap-4">
+          </motion.div>
+          <motion.div
+            className="flex flex-col gap-4"
+            initial="hidden"
+            animate="visible"
+            custom={0.8}
+            variants={itemVariants}
+          >
             <p className="font-semibold text-[1.05rem]">Legal</p>
             <Link className="text-[0.9rem]" href="/privacy">
               Privacy Policy
@@ -56,15 +107,23 @@ const Footer = () => {
             <Link className="text-[0.9rem]" href="/terms">
               Terms and Conditions
             </Link>
-          </div>
+          </motion.div>
         </div>
-        <p className="text-center text-[0.91rem] mt-[4rem]">
+
+        {/* Animated Copyright */}
+        <motion.p
+          className="text-center text-[0.91rem] mt-[4rem]"
+          initial="hidden"
+          animate="visible"
+          custom={1}
+          variants={itemVariants}
+        >
           &copy; Copyright 2024,
           <br /> All Right Reserved
-        </p>
+        </motion.p>
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

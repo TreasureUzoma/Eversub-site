@@ -81,29 +81,34 @@ const Waitlist: React.FC = () => {
     <main className="flex justify-center text-center items-center min-h-[55vh] md:min-h-[65vh] lg:min-h-[80vh]">
       <Toaster />
       <div ref={ref} className="my_fixed_width lg:max-w-[750px]">
+        {/* Heading with Animation */}
         <motion.h2
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          variants={headingContainerVariants}
+          variants={headingVariants}
           className="text-[1.5rem] font-semibold"
         >
           Join our waitlist!
-          <motion.span
-         
-        >
-          <motion.p
-            variants={wordVariants}
-            className="text-[0.9rem] font-medium my-2 mb-[2rem]"
-          >
-            Signup for our waitlist, be among the first to signup when Eversub
-            minimum viable product is available.
-          </motion.p>
-        </motion.span>
         </motion.h2>
-        
 
+        {/* Animated Description */}
+        <motion.p
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={descriptionVariants}
+          className="text-[0.9rem] font-medium my-2 mb-[2rem]"
+        >
+          Signup for our waitlist, be among the first to signup when Eversub
+          minimum viable product is available.
+        </motion.p>
+
+        {/* Form Section */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
+          <motion.div
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={inputVariants}
+          >
             <input
               type="email"
               name="Email"
@@ -119,16 +124,20 @@ const Waitlist: React.FC = () => {
             {successMessage && (
               <p className="text-green-500 text-sm mt-1">{successMessage}</p>
             )}
-          </div>
-          <button
+          </motion.div>
+
+          <motion.button
             type="submit"
             disabled={loading}
             className={`py-2 px-8 rounded-2xl font-semibold text-white text-[0.8rem] ${
               loading ? "bg-orange-700" : "bg-myRed hover:bg-orange-700"
             } transition-colors`}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={buttonVariants}
           >
             {loading ? "Joining..." : "Join Now"}
-          </button>
+          </motion.button>
         </form>
       </div>
     </main>
@@ -137,30 +146,54 @@ const Waitlist: React.FC = () => {
 
 export default Waitlist;
 
-export const headingContainerVariants = {
-  hidden: {
-    opacity: 0,
-  },
+// Animation Variants
+export const headingVariants = {
+  hidden: { opacity: 0, y: -50 },
   visible: {
     opacity: 1,
+    y: 0,
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: 2,
+      duration: 0.8,
+      ease: [0.83, 0, 0.17, 1],
     },
   },
 };
 
-export const wordVariants = {
-  hidden: {
-    y: 0,
-    opacity: 10,
-  },
+export const descriptionVariants = {
+  hidden: { opacity: 0, y: -30 },
   visible: {
-    y: 0,
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 1,
-      ease: [0.83, 0.1, 0.17, 1],
+      duration: 0.8,
+      ease: [0.83, 0, 0.17, 1],
+      delay: 0.2,
+    },
+  },
+};
+
+export const inputVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.83, 0, 0.17, 1],
+      delay: 0.4,
+    },
+  },
+};
+
+export const buttonVariants = {
+  hidden: { opacity: 0, y: -10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.83, 0, 0.17, 1],
+      delay: 0.6,
     },
   },
 };

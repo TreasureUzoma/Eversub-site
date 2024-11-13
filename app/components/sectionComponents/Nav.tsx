@@ -89,7 +89,7 @@ const Nav = ({ page = "" }) => {
           className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-40 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8"
           onClick={handleNav}
         >
-          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full sm:grid-cols-3">
+          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full  sm:grid-cols-3">
             {/* Direct to my portfolio till web app is ready! */}
             <a
               href="https://treasuresureuzoma.netlify.app/"
