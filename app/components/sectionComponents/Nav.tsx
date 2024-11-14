@@ -12,7 +12,7 @@ const Nav = ({ page = "" }) => {
 
   return (
     <>
-      <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-40 py-5 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md">
+      <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-5 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md">
         <div className="flex justify-center w-full">
           <div className="flex items-center justify-between my_fixed_width">
             <h3 className="text-base font-bold font-grotesk">Eversub</h3>
