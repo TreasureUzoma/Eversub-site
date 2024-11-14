@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { title } from "process";
-import { url } from "inspector";
 
 
 export const metadata: Metadata = {
