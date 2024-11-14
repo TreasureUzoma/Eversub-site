@@ -49,7 +49,7 @@ const Hero = () => {
             </mark>
           </motion.h1>
           <motion.p
-            className="text-[0.98rem] leading-[1.45rem] font-medium mb-7 sm:text-base dark:text-white"
+            className="text-[0.98rem] leading-[1.45rem] font-medium mb-7 sm:text-base md:leading-[1.6rem] dark:text-white"
             initial="hidden"
             animate="visible"
             custom={0.2} // Delay for sequential animation
@@ -69,7 +69,7 @@ const Hero = () => {
             variants={containerVariants}
           >
             <Link
-              className="bg-myRed rounded-2xl py-2 px-6 text-white font-semibold text-center text-[0.77rem]"
+              className="bg-myRed rounded-2xl py-2 px-6 text-white font-semibold text-[0.77rem] md:text-base"
               href="/about"
             >
               Learn more!
