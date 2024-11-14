@@ -6,7 +6,7 @@ const ALLOWED_ORIGIN = "https://eversub.vercel.app";
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
 
-  // Check for allowed origin
+  // Check if the request's origin is allowed
   if (origin !== ALLOWED_ORIGIN) {
     return NextResponse.json(
       { error: "Access denied." },
@@ -22,6 +22,7 @@ export async function POST(request: Request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const messageRegex = /^[\w\s.,!?'"-]{2,1000}$/;
 
+    // Validate input data
     if (
       !nameRegex.test(name) ||
       !emailRegex.test(email) ||
@@ -33,10 +34,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Fetch Telegram configuration
+    // Access environment variables
     const telegramBotToken = process.env.TELEGRAM_TOKEN;
     const telegramChatId = process.env.TELEGRAM_CHAT_ID;
 
+    // Ensure required environment variables are available
     if (!telegramBotToken || !telegramChatId) {
       return NextResponse.json(
         { error: "Server configuration error." },
@@ -44,18 +46,23 @@ export async function POST(request: Request) {
       );
     }
 
-    // Construct the Telegram message
-    const telegramMessage = `New Message :)\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    // Construct and send the message to Telegram
+    const telegramMessage = `New Message:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
     const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(telegramMessage)}`;
 
     const telegramResponse = await fetch(telegramUrl, { method: "GET" });
 
+    // Check if the Telegram API request was successful
     if (!telegramResponse.ok) {
       const errorText = await telegramResponse.text();
       console.error("Telegram API error:", errorText);
-      throw new Error("Failed to send message to Telegram.");
+      return NextResponse.json(
+        { error: "Failed to send message to Telegram." },
+        { status: 500 }
+      );
     }
 
+    // Respond with success if message was sent
     return NextResponse.json(
       { message: "Message sent successfully" },
       { status: 200 }

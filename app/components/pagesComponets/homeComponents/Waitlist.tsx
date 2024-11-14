@@ -98,8 +98,8 @@ const Waitlist: React.FC = () => {
           variants={descriptionVariants}
           className="text-[0.9rem] font-medium my-2 mb-[2rem]"
         >
-          Signup for our waitlist, be among the first to signup when Eversub
-          minimum viable product is available.
+          Signup for our waitlist, be among the first to use Eversub
+          minimum viable product.
         </motion.p>
 
         {/* Form Section */}

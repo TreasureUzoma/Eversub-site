@@ -87,12 +87,12 @@ const ContactPage = () => {
       <Nav page="contact" />
       <div>
         <HeroTwo pageName="Contact Us!" bgColor="bg-yellow-100" />
-        <div className="flex justify-center mt-[3rem]">
+        <div className="flex justify-center mt-[4rem]">
           <div className="py-2 my_fixed_width">
             <h3 className="text-base font-semibold">
               Here to give you all the support you need.
             </h3>
-            <div className="my-6 flex justify-center place-items-center w-full gap-8 md:gap-6 flex-col md:grid md:grid-cols-2">
+            <div className="my-6 flex justify-center place-items-center w-full gap-12 md:gap-6 flex-col md:grid md:grid-cols-2 lg:gap-9">
               <form
                 onSubmit={handleSubmit}
                 className="bg-myRed bg-opacity-10 p-5 py-7 rounded-2xl flex flex-col gap-y-4 w-full"
@@ -111,7 +111,7 @@ const ContactPage = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Full Name"
-                    className="block w-full px-2 py-3 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
+                    className="block w-full p-3 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
                   />
                 </div>
                 <div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="example@mail.com"
-                    className="block w-full px-2 py-3 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
+                    className="block w-full p-3 text-[0.91rem] rounded-lg outline-none focus:boder focus:border-myRed"
                   />
                 </div>
                 <div>
@@ -144,7 +144,7 @@ const ContactPage = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Message"
-                    className="block w-full px-2 py-3 text-[0.91rem] rounded-lg outline-none h-[8.5rem] focus:border focus:border-myRed resize-none"
+                    className="block w-full p-3 text-[0.91rem] rounded-lg outline-none h-[8.5rem] focus:border focus:border-myRed resize-none"
                   ></textarea>
                 </div>
                 {errorMessage && (

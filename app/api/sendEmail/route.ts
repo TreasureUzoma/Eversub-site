@@ -22,10 +22,12 @@ export async function POST(request: Request) {
   try {
     const { email } = await request.json();
 
+    // Validate email
     if (!email || !isValidEmail(email)) {
       return NextResponse.json({ error: "A valid email is required" }, { status: 400 });
     }
 
+    // Check if the email is already in the waitlist
     const emailQuery = query(collection(db, "waitlist"), where("email", "==", email));
     const existingEmails = await getDocs(emailQuery);
     
@@ -33,6 +35,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "This email is already on our waitlist. Try a different one." }, { status: 409 });
     }
 
+    // Add the email to the waitlist
     await addDoc(collection(db, "waitlist"), { email, timestamp: new Date() });
 
     return NextResponse.json({
