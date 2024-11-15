@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   // Check if the request's origin is allowed
   if (origin !== ALLOWED_ORIGIN) {
     return NextResponse.json(
-      { error: "Access denied." },
+      { error: "Something went wrong." },
       { status: 403 }
     );
   }
