@@ -15,7 +15,7 @@ const Nav = ({ page = "" }) => {
       <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-5 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md">
         <div className="flex justify-center w-full">
           <div className="flex items-center justify-between my_fixed_width">
-            <h3 className="text-base font-bold font-grotesk">Eversub</h3>
+            <Link href="/" className="text-base font-bold font-grotesk">Eversub</Link>
             <button onClick={handleNav} className="md:hidden">
               {navOpen ? (
                 <i className="fa fa-times"></i>
@@ -24,14 +24,6 @@ const Nav = ({ page = "" }) => {
               )}
             </button>
             <div className="flex items-center justify-between space-x-7 hidden lg:space-x-10 md:inline-block">
-              <Link
-                href="/"
-                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
-                  page === "home" ? "underline" : ""
-                }`}
-              >
-                Home
-              </Link>
               <Link
                 href="/about"
                 className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
