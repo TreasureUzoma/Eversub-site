@@ -17,12 +17,12 @@ const privacyPage = () => {
             <h2 className="text-[1rem] font-semibold">
               Eversub Privacy Policy
             </h2>
-            <p className="my-2 text-[0.9rem] text-[0.9rem] mb-7">
+            <p className="my-2 text-[0.9rem] text-[0.9rem] mb-11">
               Effective Date: 26/12/2024
             </p>
 
             <h2 className="text-[1.15rem] font-semibold">Introduction</h2>
-            <p className="my-2 text-[0.9rem] mb-7">
+            <p className="my-2 text-[0.9rem] mb-11">
               Welcome to <i>Eversub</i>. This Privacy Policy explains how we
               collect, use, disclose, and protect information about you when you
               use our website, application, and any other products and services
@@ -56,7 +56,7 @@ const privacyPage = () => {
               We may collect certain information automatically when you use our
               Services, such as:
             </p>
-            <ol className="text-[0.92rem] list-disc pl-4 mb-7">
+            <ol className="text-[0.92rem] list-disc pl-4 mb-11">
               <li>
                 Device Information (e.g., IP address, browser type, and version)
               </li>
@@ -73,7 +73,7 @@ const privacyPage = () => {
               We use the collected information to improve your experience with
               our Services, as described below:
             </p>
-            <ol className="text-[0.92rem] list-disc pl-4 mb-7">
+            <ol className="text-[0.92rem] list-disc pl-4 mb-11">
               <li>
                 <b>Account Management:</b> To create and manage your account.
               </li>
@@ -96,7 +96,7 @@ const privacyPage = () => {
             </ol>
 
             <h2 className="text-[1.15rem] font-semibold">3. Our Services</h2>
-            <p className="my-2 text-[0.9rem] mb-7">
+            <p className="my-2 text-[0.9rem] mb-11">
               Eversub provides a convenient way to manage and pay your bills and
               subscriptions all in one place. Our platform helps simplify
               financial tasks by offering tools to track payment schedules,
@@ -108,7 +108,7 @@ const privacyPage = () => {
             <h2 className="text-[1.15rem] font-semibold">
               4. How Your Data Is Stored
             </h2>
-            <p className="my-2 text-[0.9rem] mb-7">
+            <p className="my-2 text-[0.9rem] mb-11">
               Your data is securely stored using industry-standard encryption
               and security practices. We utilize secure servers and databases to
               protect your personal information from unauthorized access,
@@ -120,7 +120,7 @@ const privacyPage = () => {
             </p>
 
             <h2 className="text-[1.15rem] font-semibold">5. Contact Us</h2>
-            <p className="my-2 text-[0.9rem] mb-7">
+            <p className="my-2 text-[0.9rem] mb-11">
               If you have questions or concerns about this Privacy Policy or
               your data, please reach out to us via our{" "}
               <Link href="/contact" className="underline">

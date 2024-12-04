@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   // Check if the request's origin is allowed
   if (origin !== ALLOWED_ORIGIN) {
     return NextResponse.json(
-      { error: "Something went wrong." },
+      { error: "Server Access Denied" },
       { status: 403 }
     );
   }
@@ -39,13 +39,13 @@ export async function POST(request: Request) {
     const telegramChatId = process.env.TELEGRAM_CHAT_ID;
 
     // Ensure required environment variables are available
-    if (!telegramBotToken || !telegramChatId) {
+    if (!telegramBotToken || !telegramChatId) { 
       return NextResponse.json(
         { error: "Server configuration error." },
         { status: 500 }
       );
     }
-
+ 
     // Construct and send the message to Telegram
     const telegramMessage = `New Message:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
     const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(telegramMessage)}`;

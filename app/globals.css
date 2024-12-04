@@ -8,8 +8,8 @@
 @tailwind utilities;
 
 body {
-  background-color: #fdfdfd;
-  color: #332941;
+  background-color: #fefefe;
+  color: #09090b;
   font-family: Poppins;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(252, 65, 0, 0.3);
+  background-color: rgba(252, 65, 0, 0.1);
 }
 
 @layer base {

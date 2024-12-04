@@ -15,7 +15,7 @@ const Nav = ({ page = "" }) => {
       <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-5 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md">
         <div className="flex justify-center w-full">
           <div className="flex items-center justify-between my_fixed_width">
-            <Link href="/" className="text-base font-bold font-grotesk">Eversub</Link>
+            <Link href="/" className="text-[1.16rem] font-bold hover:text-black">Eversub.</Link>
             <button onClick={handleNav} className="md:hidden">
               {navOpen ? (
                 <i className="fa fa-times"></i>
@@ -26,7 +26,7 @@ const Nav = ({ page = "" }) => {
             <div className="flex items-center justify-between space-x-7 hidden lg:space-x-10 md:inline-block">
               <Link
                 href="/about"
-                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed hover:underline ${
                   page === "about" ? "underline" : ""
                 }`}
               >
@@ -34,7 +34,7 @@ const Nav = ({ page = "" }) => {
               </Link>
               <Link
                 href="/privacy"
-                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed hover:underline ${
                   page === "privacy" ? "underline" : ""
                 }`}
               >
@@ -42,7 +42,7 @@ const Nav = ({ page = "" }) => {
               </Link>
               <Link
                 href="/terms"
-                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed hover:underline ${
                   page === "terms" ? "underline" : ""
                 }`}
               >
@@ -50,7 +50,7 @@ const Nav = ({ page = "" }) => {
               </Link>
               <Link
                 href="/faq"
-                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed hover:underline ${
                   page === "faq" ? "underline" : ""
                 }`}
               >
@@ -58,7 +58,7 @@ const Nav = ({ page = "" }) => {
               </Link>
               <Link
                 href="/contact"
-                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed ${
+                className={`hidden md:inline font-semibold text-[0.8rem] decoration-myRed hover:underline ${
                   page === "contact" ? "underline" : ""
                 }`}
               >
@@ -66,7 +66,7 @@ const Nav = ({ page = "" }) => {
               </Link>
               <a
                 href="https://treasuresureuzoma.netlify.app/"
-                className="rounded-3xl ml-2 border border-[2px] border-myRed bg-myRed text-sm font-semibold py-1 px-5 text-white text-[0.8rem]"
+                className="hover:underline rounded-3xl ml-2 border border-[2px] border-myRed bg-myRed text-sm font-semibold py-1 px-5 text-white text-[0.8rem]"
               >
                 Get Started
               </a>
