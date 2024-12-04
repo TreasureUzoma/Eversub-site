@@ -18,9 +18,9 @@ export async function POST(request: Request) {
     const { name, email, message } = await request.json();
 
     // Refined regex for validation
-    const nameRegex = /^[\w\s.,!?'"-]{2,1000}$/;
+    const nameRegex = /^.{2,100}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const messageRegex = /^[\w\s.,!?'"-]{2,1000}$/;
+    const messageRegex = /^.{2,1000}$/;
 
     // Validate input data
     if (
@@ -47,7 +47,7 @@ export async function POST(request: Request) {
     }
  
     // Construct and send the message to Telegram
-    const telegramMessage = `New Message:\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const telegramMessage = `New Message :)\n\nName: ${name}\n\nEmail: ${email}\n\nMessage: ${message}`;
     const telegramUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${telegramChatId}&text=${encodeURIComponent(telegramMessage)}`;
 
     const telegramResponse = await fetch(telegramUrl, { method: "GET" });

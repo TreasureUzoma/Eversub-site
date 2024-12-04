@@ -54,7 +54,7 @@ const Waitlist: React.FC = () => {
       {/* Radial gradient for the container */}
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <Toaster />
-      <div ref={ref} className="my_fixed_width lg:max-w-[750px] text-center">
+      <div ref={ref} className="my_fixed_width lg:max-w-[750px] -mt-4 text-center">
         {/* Heading */}
         <motion.h2
           initial="hidden"
