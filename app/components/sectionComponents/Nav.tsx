@@ -65,7 +65,7 @@ const Nav = ({ page = "" }) => {
                 Contact
               </Link>
               <a
-                href="https://treasuresureuzoma.netlify.app/"
+                href="/"
                 className="hover:underline rounded-3xl ml-2 border border-[2px] border-myRed bg-myRed text-sm font-semibold py-1 px-5 text-white text-[0.8rem]"
               >
                 Get Started
@@ -84,7 +84,7 @@ const Nav = ({ page = "" }) => {
           <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full  sm:grid-cols-3">
             {/* Direct to my portfolio till web app is ready! */}
             <a
-              href="https://treasuresureuzoma.netlify.app/"
+              href="/"
               className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2 w-full"
             >
               Sign Up
