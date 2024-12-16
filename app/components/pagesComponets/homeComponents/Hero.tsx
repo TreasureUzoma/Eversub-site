@@ -52,7 +52,7 @@ const Hero = () => {
   return (
     <>
       <Toaster />
-      <section className="bg-myRed min-h-[41rem] py-4 pt-[5rem] flex_center">
+      <section className="bg-myRed min-h-[43rem] py-4 pt-[5rem] flex_center">
         <div className="my_fixed_width font-geist">
           <div className="grid md:grid-cols-2 h-full">
             {/* Heading */}
