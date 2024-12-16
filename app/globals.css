@@ -9,12 +9,18 @@
 
 body {
   background-color: #fefefe;
-  color: #09090b;
+  color: #1d0700;
   font-family: Poppins;
 }
 
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .my_fixed_width {
-  width: 83%;
+  width: 84%;
   max-width: 1260px;
 }
 

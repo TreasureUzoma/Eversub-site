@@ -1,5 +1,3 @@
-import Nav from "../components/sectionComponents/Nav";
-import Footer from "../components/sectionComponents/Footer";
 import QuickLinks from "../components/pagesComponets/QuickLinks";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
 import Link from "next/link";
@@ -7,7 +5,6 @@ import Link from "next/link";
 const termsPage = () => {
   return (
     <>
-      <Nav page="terms" />
       <div className="mt-0">
         <HeroTwo pageName="Terms and Condtions" bgColor="bg-[#ebe3fb]" />
         <div className="flex justify-center mt-[3rem]">
@@ -92,7 +89,6 @@ const termsPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

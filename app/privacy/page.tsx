@@ -1,6 +1,3 @@
-
-import Nav from "../components/sectionComponents/Nav";
-import Footer from "../components/sectionComponents/Footer";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
 import QuickLinks from "../components/pagesComponets/QuickLinks";
 import Link from "next/link";
@@ -8,7 +5,6 @@ import Link from "next/link";
 const privacyPage = () => {
   return (
     <>
-      <Nav page="privacy" />
       <div>
         <HeroTwo pageName="Privacy Policy" bgColor="bg-[#e0eff1]" />
         <div className="flex justify-center mt-[3rem]">
@@ -131,7 +127,6 @@ const privacyPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

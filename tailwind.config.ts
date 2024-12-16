@@ -30,16 +30,20 @@ const config: Config = {
       fontFamily: {
         poppins: 'Poppins',
         rubik: 'Rubik',
+        geist: "Geist",
         grotesk: 'Cabinet Grotesk',
         ...defaultTheme.fontFamily,
       },
       backgroundColor: {
         myWhite: '#fbfbfb',
+        dark: "#1d0700",
         myRed: '#fc4100',
         myBlack: '#332941',
+        lightOrange: "rgba(255, 204, 68, 0.1)",
       },
       colors: {
         background: 'var(--background)',
+        dark: "#1d0700",
         foreground: 'var(--foreground)',
         myRed: '#fc4100',
         myBlack: '#332941',

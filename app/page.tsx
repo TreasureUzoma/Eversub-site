@@ -1,14 +1,9 @@
-import Nav from "./components/sectionComponents/Nav";
-// import Hero from "./components/pagesComponets/homeComponents/Hero";
-import Waitlist from "./components/pagesComponets/homeComponents/Waitlist";
-import Footer from "./components/sectionComponents/Footer";
+import Hero from "./components/pagesComponets/homeComponents/Hero";
 
 const page = () => {
   return (
     <>
-      <Nav />
-      <Waitlist />
-      <Footer />
+      <Hero />
     </>
   );
 };

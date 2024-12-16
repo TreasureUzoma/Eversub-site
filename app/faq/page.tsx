@@ -1,7 +1,5 @@
-import Nav from "../components/sectionComponents/Nav";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
 import QuickLinksTwo from "../components/pagesComponets/QuickLinksTwo";
-import Footer from "../components/sectionComponents/Footer";
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +10,6 @@ import {
 const Page: React.FC = () => {
   return (
     <>
-      <Nav page="faq" />
       <div>
         <HeroTwo pageName="Frequently Asked Questions" bgColor="bg-green-100" />
         <div className="flex justify-center mt-[3rem]">
@@ -104,7 +101,6 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

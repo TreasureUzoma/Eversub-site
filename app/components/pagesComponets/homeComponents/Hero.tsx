@@ -1,84 +1,130 @@
 "use client";
 
+import { useFadeOut } from "@/hooks/use-fadeOut"
 import Link from "next/link";
-import { TypeAnimation } from 'react-type-animation';
-import { motion } from "framer-motion";
-
-// Variants for sequential animation with corrected easing
-const containerVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (delay: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay, duration: 0.8, ease: "easeOut" }, // Changed to valid ease function
-  }),
-};
+import Image from "next/image";
+import { useEffect } from "react";
+import { Toaster } from "@/components/ui/toaster";
+import { useToast } from "@/hooks/use-toast";
+import { useJoinWaitlist } from "@/hooks/use-joinWaitlist";
 
 const Hero = () => {
-  return (
-    <header>
-      <div className="h-[47rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-dot-black/[0.2] mt-[-5rem] relative flex items-center justify-center">
-        {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        <div className="text-center my_fixed_width pb-3">
-          <motion.h1
-            className="text-4xl sm:text-6xl md:text-7xl font-bold relative z-20 py-8"
-            initial="hidden"
-            animate="visible"
-            custom={0}
-            variants={containerVariants}
-          >
-            Pay bills,{" "}
-            <mark className="text-myRed bg-myRed px-2 rounded-2xl bg-opacity-10 inline-block dark:text-white">
-              <TypeAnimation
-                sequence={[
-                  "effortlessly",
-                  1700,
-                  "seamlessly",
-                  1700,
-                  "quickly",
-                  1700,
-                  "securely",
-                  1700,
-                  "with ease",
-                  1700,
-                ]}
-                speed={5}
-                repeat={Infinity}
-              />
-            </mark>
-          </motion.h1>
-          <motion.p
-            className="text-[0.98rem] leading-[1.45rem] font-medium mb-7 sm:text-base md:leading-[1.6rem] dark:text-white"
-            initial="hidden"
-            animate="visible"
-            custom={0.2} // Delay for sequential animation
-            variants={containerVariants}
-          >
-            Experience the benefits of effortless bill payments with Eversub.
-            Save time, reduce stress, and gain financial clarity.
-            <span className="hidden md:inline">
-              &nbsp;Our platform streamlines your expenses, allowing you to
-              focus on what matters most.
-            </span>
-          </motion.p>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            custom={0.4} // Delay for sequential animation
-            variants={containerVariants}
-          >
-            <Link
-              className="bg-myRed rounded-2xl py-2 px-6 text-white font-semibold text-[0.77rem] md:text-base"
-              href="/about"
-            >
-              Learn more!
-            </Link>
-          </motion.div>
-        </div>
-      </div>
-    </header>
-  );
-};
+  const { toast } = useToast();
+  const {
+    handleSubmit,
+    email,
+    setEmail,
+    errorMessage,
+    successMessage,
+    loading,
+    setResponse,
+    setResponseVariant,
+    setJoinResponseMessage,
+    responseVariant,
+    joinResponseMessage,
+    response,
+  } = useJoinWaitlist();
 
-export default Hero;
+    // Toast Effect with proper cleanup
+    useEffect(() => {
+      if (response) {
+        toast({
+          variant: responseVariant as "default" | "destructive" | "success" | null | undefined,
+          title: response,
+          description: joinResponseMessage,
+        });
+    
+        // Reset values
+        setResponseVariant("default");
+        setJoinResponseMessage("");
+        setResponse("");
+      }
+    
+      return () => {
+        // Clean up any side-effects
+        setResponseVariant("default");
+        setJoinResponseMessage("");
+        setResponse("");
+      };
+    }, [response, toast]);
+
+  const {fade, currentSentence} = useFadeOut();
+  return (
+    <>
+      <Toaster />
+      <section className="bg-myRed min-h-[41rem] py-4 pt-[5rem] flex_center">
+        <div className="my_fixed_width font-geist">
+          <div className="grid md:grid-cols-2 h-full">
+            {/* Heading */}
+            <div className="flex_center">
+              <h1
+                className={`font-[700] text-3xl md:text-5xl transition-opacity duration-500 inline-block tracking-[-1px] ${
+                  fade ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                {currentSentence}
+              </h1>
+            </div>
+
+            {/* Image Section */}
+            <div className="flex_center">
+              <figure className="flex_center">
+                <Image
+                  alt="Eversub Mockup"
+                  width={1000}
+                  height={1000}
+                  src="/images/mockup.png"
+                />
+              </figure>
+            </div>
+          </div>
+
+          {/* Form Section */}
+          <div className="mt-5">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full md:w-[50%] flex-col flex gap-2"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                className="p-2 px-3 border placeholder:text-[#1d0700] text-base rounded-md font-semibold"
+              />
+              {errorMessage && (
+                <p className="text-dark text-sm mt-1">{errorMessage}</p>
+              )}
+              {successMessage && (
+                <p className="text-green-500 text-sm mt-1">{successMessage}</p>
+              )}
+              <button
+                disabled={loading}
+                type="submit"
+                className="bg-dark hover:bg-opacity-20 p-2 font-semibold rounded-md text-white"
+              >
+                {loading ? "Joining..." : "Join Now"}
+              </button>
+            </form>
+
+            <p className="text-[0.75rem] font-semibold mt-5 leading-[0.75rem]">
+              <small>
+                Eversub is a financial technology project, not a bank. Banking
+                services are provided CBN and NBIC licensed third-party
+                services.
+              </small>
+              <br />
+              <br />
+              <small>
+                Learn how we collect and use your information by visiting our{" "}
+                <Link href="/privacy">Privacy Policy &gt;</Link>
+              </small>
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default Hero

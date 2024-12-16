@@ -15,7 +15,7 @@ const itemVariants = {
 
 const Footer = () => {
   return (
-    <footer className="mt-12 flex justify-center py-[3rem] md:mt-0 bg-myRed bg-opacity-10">
+    <footer className="mt-12 flex justify-center py-[3rem] md:mt-0 bg-lightOrange">
       <div className="my_fixed_width">
         <motion.div
           className="flex items-center justify-between"

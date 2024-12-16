@@ -1,12 +1,9 @@
-import Nav from "../components/sectionComponents/Nav";
-import Footer from "../components/sectionComponents/Footer";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
 import QuickLinksTwo from "../components/pagesComponets/QuickLinksTwo";
 
 const aboutPage = () => {
   return (
     <>
-      <Nav page="about" />
       <div className="mt-0">
         <HeroTwo pageName="About Us" bgColor="bg-[#fdeae6]"/>
         <div className="flex justify-center mt-[3rem]">
@@ -58,7 +55,6 @@ const aboutPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

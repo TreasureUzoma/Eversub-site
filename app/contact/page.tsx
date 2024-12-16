@@ -1,9 +1,6 @@
 "use client";
 import { useState, FormEvent } from "react";
-import Nav from "../components/sectionComponents/Nav";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
-import Footer from "../components/sectionComponents/Footer";
-
 import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
@@ -84,7 +81,6 @@ const ContactPage = () => {
 
   return (
     <>
-      <Nav page="contact" />
       <div>
         <HeroTwo pageName="Contact Us!" bgColor="bg-yellow-100" />
         <div className="flex justify-center mt-[4rem]">
@@ -198,7 +194,6 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
