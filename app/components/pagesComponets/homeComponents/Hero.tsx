@@ -99,7 +99,14 @@ const Hero = () => {
                   {loading ? "Joining..." : "Join waitlist!"}
                 </button>
               </form>
-
+              <figure className="w-full flex items-center justify-center md:hidden">
+              <Image
+                alt="Eversub Mockup"
+                width={1000}
+                height={1000}
+                src="/images/mockups/heromockup.png"
+              />
+            </figure>
               <p className="text-[0.75rem] font-semibold leading-[0.75rem]">
                 <small>
                   Eversub is a financial technology project, not a bank. Banking
@@ -115,7 +122,7 @@ const Hero = () => {
               </p>
             </div>
             {/* Image Section */}
-            <figure className="w-full flex items-center justify-center md:justify-end">
+            <figure className="hidden w-full md:flex items-center justify-center md:justify-end">
               <Image
                 alt="Eversub Mockup"
                 width={1000}
