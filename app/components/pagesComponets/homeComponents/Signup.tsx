@@ -14,12 +14,12 @@ const Signup = () => {
             You still have&#39;t joined yet? Sign up now and experience the convenience of easy bill payments and subscriptions with Eversub!
           </p>
           <div>
-            <Link
-              href="#"
+            <a
+              href="https://eversubapp.vercel.app"
               className="mt-2 px-3 py-1 border border-2 border-myRed rounded-md inline-block hover:bg-myRed hover:dark"
             >
               Sign up Now
-            </Link>
+            </a>
           </div>
         </div>
         <figure className="w-full flex items-center justify-center md:justify-end">

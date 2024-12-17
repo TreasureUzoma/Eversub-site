@@ -52,12 +52,12 @@ const Nav = () => {
                   {label}
                 </Link>
               ))}
-              <Link
-                href="/"
+              <a
+                href="https://eversubapp.vercel.app"
                 className="hover:underline rounded-md ml-2 border border-[2px] border-dark bg-dark text-sm font-semibold py-1 px-5 text-white text-[0.8rem]"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -72,12 +72,12 @@ const Nav = () => {
           <div
             className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full sm:grid-cols-3"
           >
-            <Link
-              href="/"
+            <a
+              href="https://eversubapp.vercel.app"
               className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2 w-full"
             >
               Sign Up
-            </Link>
+            </a>
             <Link
               href="/"
               className={`rounded-3xl block border border-[2px] ${
