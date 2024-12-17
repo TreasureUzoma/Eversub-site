@@ -103,8 +103,8 @@ const Hero = () => {
               <p className="text-[0.75rem] font-semibold leading-[0.75rem]">
                 <small>
                   Eversub is a financial technology project, not a bank. Banking
-                  services are provided CBN and NBIC licensed third-party
-                  services.
+                  services are provided by CBN and NIBSS-licensed third-party
+                  financial institutions.
                 </small>
                 <br />
                 <br />

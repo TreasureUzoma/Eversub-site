@@ -64,7 +64,7 @@ const Footer = () => {
 
         {/* Animated Description */}
         <motion.p
-          className="text-[0.9rem] py-6"
+          className="text-[0.9rem] py-6 md:w-[65%]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
