@@ -7,7 +7,7 @@ const Section1 = () => {
     <section className="flex_center py-[6rem] bg-lightOrange">
       <div className="my_fixed_width gap-10 md:gap-0 items-center grid md:grid-cols-2">
         <div className='flex flex-col gap-4'>
-          <h2 className="text-2xl font-semibold md:text-4xl">
+          <h2 className="tracking-[-1px] text-2xl font-semibold md:text-4xl">
             Check out your way.
           </h2>
           <p>
@@ -24,7 +24,7 @@ const Section1 = () => {
             alt="Eversub Mockup"
             width={1000}
             height={1000}
-            src="/images/mockup.png"
+            src="/images/mockups/settingscreenshot.png"
           />
         </figure>
       </div>

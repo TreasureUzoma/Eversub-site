@@ -96,7 +96,7 @@ const Hero = () => {
                   type="submit"
                   className="bg-dark hover:bg-opacity-20 p-2 font-semibold rounded-md text-white"
                 >
-                  {loading ? "Joining..." : "Join Now"}
+                  {loading ? "Joining..." : "Join waitlist!"}
                 </button>
               </form>
 
@@ -120,7 +120,7 @@ const Hero = () => {
                 alt="Eversub Mockup"
                 width={1000}
                 height={1000}
-                src="/images/mockup.png"
+                src="/images/mockups/heromockup.png"
               />
             </figure>
           </div>

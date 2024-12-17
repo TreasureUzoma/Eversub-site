@@ -7,7 +7,7 @@ const Signup = () => {
     <section className="flex_center py-[6rem]">
       <div className="my_fixed_width items-center gap-10 md:gap-0 grid md:grid-cols-2">
         <div className="flex flex-col gap-4">
-          <h2 className="text-2xl font-semibold md:text-4xl">
+          <h2 className="tracking-[-1px] text-2xl font-semibold md:text-4xl">
             Join Eversub Now!
           </h2>
           <p>
@@ -27,7 +27,7 @@ const Signup = () => {
             alt="Eversub Mockup"
             width={1000}
             height={1000}
-            src="/images/mockup.png"
+            src="/images/mockups/walletscreenshot.png"
           />
         </figure>
       </div>
