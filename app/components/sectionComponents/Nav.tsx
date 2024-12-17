@@ -27,7 +27,10 @@ const Nav = () => {
       <nav className="flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-5 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md">
         <div className="flex justify-center w-full">
           <div className="flex items-center justify-between my_fixed_width">
-            <Link href="/" className="text-[1.16rem] font-bold hover:text-black">
+            <Link
+              href="/"
+              className="text-[1.16rem] font-bold hover:text-black"
+            >
               Eversub.
             </Link>
             <button onClick={handleNav} className="md:hidden">
@@ -63,10 +66,13 @@ const Nav = () => {
       {/* Mobile Navigation */}
       {navOpen && (
         <div
-          className="md:hidden fixed bottom-0 left-0 right-0 top-[4rem] z-40 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8"
+          className="md:hidden fixed bottom-0 left-0 right-0 top-[4.23rem] z-40 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8"
           onClick={handleNav}
         >
-          <div className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full sm:grid-cols-3">
+          <div
+            onClick={() => console.log("Clicked lolz")}
+            className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full sm:grid-cols-3"
+          >
             <Link
               href="/"
               className="rounded-3xl block border border-[2px] border-myRed bg-myRed text-sm font-semibold py-2 px-6 text-white my-2 w-full"
@@ -74,13 +80,13 @@ const Nav = () => {
               Sign Up
             </Link>
             <Link
-                href="/"
-                className={`rounded-3xl block border border-[2px] ${
-                  pathname === "/" ? "border-myRed" : "border-white"
-                } text-sm font-semibold py-2 px-6 text-white my-2`}
-              >
-                Home
-              </Link>
+              href="/"
+              className={`rounded-3xl block border border-[2px] ${
+                pathname === "/" ? "border-myRed" : "border-white"
+              } text-sm font-semibold py-2 px-6 text-white my-2`}
+            >
+              Home
+            </Link>
             {links.map(({ href, label }) => (
               <Link
                 key={href}
