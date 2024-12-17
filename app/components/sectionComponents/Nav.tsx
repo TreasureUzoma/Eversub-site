@@ -29,7 +29,7 @@ const Nav = () => {
           <div className="flex items-center justify-between my_fixed_width">
             <Link
               href="/"
-              className="text-[1.16rem] font-bold hover:text-black"
+              className="text-[1.16rem] font-grotesk font-bold hover:text-black"
             >
               Eversub.
             </Link>
@@ -66,11 +66,10 @@ const Nav = () => {
       {/* Mobile Navigation */}
       {navOpen && (
         <div
-          className="md:hidden fixed bottom-0 left-0 right-0 top-[4.23rem] z-40 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8"
+          className="md:hidden fixed bottom-0 left-0 right-0 top-[4.24rem] z-40 bg-transparent bg-opacity-60 backdrop-filter backdrop-blur-md px-8"
           onClick={handleNav}
         >
           <div
-            onClick={() => console.log("Clicked lolz")}
             className="float-right bg-[#332941] rounded-3xl py-3 px-6 text-center grid grid-cols-2 gap-2 w-full sm:grid-cols-3"
           >
             <Link

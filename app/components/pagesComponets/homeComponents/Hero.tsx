@@ -69,7 +69,7 @@ const Hero = () => {
                 {currentSentence}
               </h1>
               <p>
-                Experience the benefits of efflortless bill payments with Eversub. Save
+                Experience the benefits of effortless bill payments with Eversub. Save
                 time, reduce stress and gain financial clarity.
               </p>
               <form
