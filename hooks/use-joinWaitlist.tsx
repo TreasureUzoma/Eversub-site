@@ -45,7 +45,7 @@ const useJoinWaitlist = () => {
             setResponseVariant("destructive")
           } else {
             setResponse("Oh no!")
-            setJoinResponseMessage("An error occurred. Please try again later.");
+            setJoinResponseMessage(data.error);
             setResponseVariant("destructive")
           }
           return;

@@ -16,7 +16,7 @@ const useFadeOut = () => {
         setCurrentSentence(sentences[sentenceIndex]);
         setFade(true);
       }, 500);
-    }, 2000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
