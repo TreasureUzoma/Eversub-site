@@ -114,13 +114,27 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* Animated Copyright */}
         <motion.p
-          className="text-center text-[0.91rem] mt-[4rem]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           custom={1}
+          variants={itemVariants}
+          className="text-[0.75rem] my-[3.7rem] font-semibold leading-[0.75rem]"
+        >
+          <small>
+            Eversub is a financial technology project, not a bank. Banking
+            services are provided by CBN and NIBSS-licensed third-party
+            financial institutions.
+          </small>
+        </motion.p>
+        {/* Animated Copyright */}
+        <motion.p
+          className="text-center text-[0.91rem]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={1.2}
           variants={itemVariants}
         >
           &copy; Copyright 2024,

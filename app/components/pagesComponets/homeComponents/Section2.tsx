@@ -18,7 +18,7 @@ const Section2 = () => {
           <div>
             <Link
               href="#"
-              className="mt-2 px-3 py-1 border border-2 border-myRed rounded-md inline-block hover:bg-myRed hover:dark"
+              className="mt-2 px-3 py-1 border border-2 border-myRed rounded-lg inline-block hover:bg-myRed hover:dark"
             >
               Learn more
             </Link>

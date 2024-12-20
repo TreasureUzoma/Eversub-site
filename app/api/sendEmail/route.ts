@@ -3,7 +3,8 @@ import { db } from '@/libs/firebase';
 import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
 
 // Email validation function
-const isValidEmail = (email: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const isValidEmail = (email: string): boolean =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 // Define your allowed origin
 const ALLOWED_ORIGIN = "https://eversub.vercel.app";
@@ -32,15 +33,23 @@ export async function POST(request: Request) {
     const existingEmails = await getDocs(emailQuery);
     
     if (!existingEmails.empty) {
-      return NextResponse.json({ error: "This email is already on our waitlist. Try a different one." }, { status: 409 });
+      return NextResponse.json(
+        {
+          error: "This email is already on our waitlist. Try a different one.",
+        },
+        { status: 409 }
+      );
     }
 
-    // Add the email to the waitlist
-    await addDoc(collection(db, "waitlist"), { email, timestamp: new Date() });
+    // Add the email to the waitlist --CLOSED
+    // await addDoc(collection(db, "waitlist"), { email, timestamp: new Date() });
 
-    return NextResponse.json({
-      message: "Email added to waitlist successfully!",
-    });
+    return NextResponse.json(
+      {
+        error: "Waitlst is closed bro!",
+      },
+      { status: 410 }
+    );
   } catch (error) {
     console.error("Error adding email to waitlist:", error);
     

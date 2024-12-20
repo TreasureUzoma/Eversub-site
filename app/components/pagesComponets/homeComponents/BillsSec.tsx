@@ -17,7 +17,7 @@ const BillsSec = () => {
           <div>
             <Link
               href="#"
-              className="mt-2 px-3 py-1 border border-2 bg-white border-white rounded-md inline-block hover:bg-gray-100"
+              className="mt-2 px-3 py-1 border border-2 bg-white border-white rounded-lg inline-block hover:bg-gray-100"
             >
               Learn more
             </Link>

@@ -15,7 +15,7 @@ const Section1 = () => {
             for all eligible transactions.
           </p>
           <div>
-            <Link href="#" className='mt-2 px-3 py-1 border border-2 border-myRed rounded-md inline-block hover:bg-myRed'>Learn more</Link>
+            <Link href="#" className='mt-2 px-3 py-1 border border-2 border-myRed rounded-lg inline-block hover:bg-myRed'>Learn more</Link>
           </div>
         </div>
         <figure className="w-full flex items-center justify-center md:justify-end">
