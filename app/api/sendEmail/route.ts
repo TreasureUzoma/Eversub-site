@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/libs/firebase';
-import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
+import { collection /*, addDoc */, query, where, getDocs } from "firebase/firestore";
 
 // Email validation function
 const isValidEmail = (email: string): boolean =>
