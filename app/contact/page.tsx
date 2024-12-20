@@ -1,6 +1,7 @@
 "use client";
 import { useState, FormEvent } from "react";
 import HeroTwo from "../components/pagesComponets/HeroTwo";
+import { Toaster } from "@/components/ui/toaster";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
@@ -81,6 +82,7 @@ const ContactPage = () => {
 
   return (
     <>
+      <Toaster />
       <div>
         <HeroTwo pageName="Contact Us!" bgColor="bg-yellow-100" />
         <div className="flex justify-center mt-[4rem]">
