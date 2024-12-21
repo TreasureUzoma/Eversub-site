@@ -1,6 +1,7 @@
 "use client";
 import { CardStack } from "@/components/ui/card-stack";
 import { cn } from "@/lib/utils";
+
 export function CardStackDemo() {
   return (
     <div className="h-[40rem] flex items-center justify-center w-full">
@@ -36,10 +37,8 @@ const CARDS = [
     designation: "Eversub User",
     content: (
       <p>
-        Best Bill Payment app ever!,{" "}
-        <Highlight>Easy to use and fast transactions</Highlight> I&#39;ve been
-        using it since MVP launch and I haven&#39;t experienced any issues. Keep
-        up your good work Eversub 🙏
+        I've been using Eversub for my bill payments and subscription management, and it's been a game-changer!{" "}
+        <Highlight>Easy to use, fast transactions, and great customer support</Highlight>. Highly recommended!
       </p>
     ),
   },
@@ -49,23 +48,41 @@ const CARDS = [
     designation: "Eversub User",
     content: (
       <p>
-        Wow, this app is amazing!,{" "}
-        <Highlight>Customer support is super responsive and helpful</Highlight> I had an issue with verifying my accounts
-        and they <Highlight>Resolved it in munites</Highlight> Higly recommended.
+        Eversub has simplified my subscription management and bill payments.{" "}
+        <Highlight>The automated reminders and notifications have saved me from late fees</Highlight>. Great job, Eversub!
       </p>
     ),
   },
   {
     id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
+    name: "Oluwatobi A.",
+    designation: "Eversub User",
     content: (
       <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
+        I was skeptical about using a new bill payment app, but Eversub has exceeded my expectations.{" "}
+        <Highlight>The user interface is intuitive, and the transaction process is seamless</Highlight>. I'm hooked!
+      </p>
+    ),
+  },
+  {
+    id: 3,
+    name: "Chinonso I.",
+    designation: "Eversub User",
+    content: (
+      <p>
+        Eversub's customer support team is top-notch! They helped me resolve an issue with my subscription management, and I was back up and running in no time.{" "}
+        <Highlight>Great service, great app!</Highlight>
+      </p>
+    ),
+  },
+  {
+    id: 4,
+    name: "Adebayo A.",
+    designation: "Eversub User",
+    content: (
+      <p>
+        I've tried several bill payment apps, but Eversub is the most reliable and efficient.{" "}
+        <Highlight>The automated payment scheduling has saved me so much time and hassle</Highlight>. Thanks, Eversub!
       </p>
     ),
   },
