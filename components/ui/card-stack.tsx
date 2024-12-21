@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-let interval: number;
+let interval: number | null = null;
 
 type Card = {
   id: number;
