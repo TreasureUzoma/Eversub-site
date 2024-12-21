@@ -1,21 +1,21 @@
 import Hero from "./components/pagesComponets/homeComponents/Hero";
-import  Section1 from "./components/pagesComponets/homeComponents/Section1";
-import  Section2 from "./components/pagesComponets/homeComponents/Section2";
+import { CardStackDemo } from "./components/pagesComponets/homeComponents/Testimonials";
+import Section2 from "./components/pagesComponets/homeComponents/Section2";
 import BillsSec from "./components/pagesComponets/homeComponents/BillsSec";
 import Nofees from "./components/pagesComponets/homeComponents/NoFees";
 import Signup from "./components/pagesComponets/homeComponents/Signup";
 
-const page = () => {
+const Page = () => {
   return (
     <>
       <Hero />
-      <Section1 />
       <Section2 />
       <BillsSec />
+      <CardStackDemo /> 
       <Nofees />
       <Signup />
     </>
   );
 };
 
-export default page;
+export default Page;

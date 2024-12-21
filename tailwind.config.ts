@@ -31,6 +31,7 @@ const config: Config = {
         poppins: 'Poppins',
         rubik: 'Rubik',
         geist: "Geist",
+        onest: "Onest",
         grotesk: 'Cabinet Grotesk',
         ...defaultTheme.fontFamily,
       },

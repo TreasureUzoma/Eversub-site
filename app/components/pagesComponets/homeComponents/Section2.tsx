@@ -1,6 +1,4 @@
-import React from 'react'
 import Image from 'next/image';
-import Link from 'next/link';
 
 const Section2 = () => {
   return (
@@ -16,12 +14,12 @@ const Section2 = () => {
             about transaction fees from both ends.
           </p>
           <div>
-            <Link
-              href="#"
-              className="mt-2 px-3 py-1 border border-2 border-myRed rounded-lg inline-block hover:bg-myRed hover:dark"
+            <a
+              href="https://eversubapp.vercel.app"
+              className="mt-2 px-4 py-1 border border-2 border-myRed rounded-lg inline-block hover:bg-myRed hover:dark"
             >
-              Learn more
-            </Link>
+              Get Started
+            </a>
           </div>
         </div>
         <figure className="w-full flex items-center justify-center md:justify-end">

@@ -3,6 +3,7 @@
 import { useFadeOut } from "@/hooks/use-fadeOut"
 import Link from "next/link";
 import Image from "next/image";
+import Icons from "../../Icons/Icons";
 
 const Hero = () => {
 
@@ -25,13 +26,13 @@ const Hero = () => {
                 time, reduce stress and gain financial clarity.
               </p>
               <div
-                className="my-2 w-full flex-col flex md:w-[91%]"
+                className="my-2 mx-auto md:w-[50%]"
               >
                 <a
                   href="https://eversubapp.vercel.app"
-                  className="p-2 text-center md:text-left md:px-4 bg-dark hover:bg-opacity-20 font-semibold rounded-md text-white"
+                  className="inline-flex items-center justify-center gap-2 md:justify-between md:gap-0 px-3 py-2 text-center md:text-left md:px-4 bg-dark hover:bg-opacity-20 font-semibold rounded-md text-white"
                 >
-                  Sign up now
+                  <span>Open an Account</span><Icons type="arrow_right" color="white" />
                 </a>
               </div>
               <figure className="w-full flex items-center justify-center md:hidden">

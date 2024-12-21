@@ -1,6 +1,4 @@
-import React from 'react'
 import Image from 'next/image';
-import Link from 'next/link';
 
 const BillsSec = () => {
   return (
@@ -15,12 +13,12 @@ const BillsSec = () => {
             Stay connected with our fast and reliable plans.
           </p>
           <div>
-            <Link
-              href="#"
-              className="mt-2 px-3 py-1 border border-2 bg-white border-white rounded-lg inline-block hover:bg-gray-100"
+            <a
+              href="https://eversubapp.vercel.app"
+              className="mt-2 px-4 py-1 border border-2 bg-white border-white rounded-lg inline-block hover:bg-gray-100"
             >
-              Learn more
-            </Link>
+              Get Started
+            </a>
           </div>
         </div>
         <figure className="w-full flex items-center justify-center md:justify-end">
