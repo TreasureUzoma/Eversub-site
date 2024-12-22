@@ -54,8 +54,7 @@ const CARDS = [
     designation: "Eversub User",
     content: (
       <p>
-        I&apos;ve been using Eversub for my bill payments and subscription
-        management, and it&apos;s been a game-changer!{" "}
+        I&apos;ve been using Eversub for my bill payments and it&apos;s been a game-changer!{" "}
         <Highlight>Easy to use, fast transactions, and great customer support</Highlight>
         . Highly recommended!
       </p>
@@ -67,7 +66,7 @@ const CARDS = [
     designation: "Eversub User",
     content: (
       <p>
-        Eversub has simplified my subscription management and bill payments.{" "}
+        Eversub has simplified my bill payments.{" "}
         <Highlight>The automated reminders and notifications have saved me from late fees</Highlight>
         . Great job, Eversub!
       </p>
@@ -81,7 +80,7 @@ const CARDS = [
       <p>
         I was skeptical about using a new bill payment app, but Eversub has
         exceeded my expectations.{" "}
-        <Highlight>The user interface is intuitive, and the transaction process is seamless</Highlight>
+        <Highlight>The UI is intuitive, and the transaction process is seamless</Highlight>
         . I&apos;m hooked!
       </p>
     ),
@@ -93,7 +92,7 @@ const CARDS = [
     content: (
       <p>
         Eversub&apos;s customer support team is top-notch! They helped me
-        resolve an issue with my subscription management, and I was back up and
+        resolve an issue with a transaction, and I was back up and
         running in no time.{" "}
         <Highlight>Great service, great app!</Highlight>
       </p>

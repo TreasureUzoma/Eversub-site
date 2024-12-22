@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import GetStartedBtn from '../../GetStartedBtn';
 
 const Section2 = () => {
   return (
@@ -14,12 +15,7 @@ const Section2 = () => {
             about transaction fees from both ends.
           </p>
           <div>
-            <a
-              href="https://eversubapp.vercel.app"
-              className="mt-2 px-4 py-1 border border-2 border-myRed rounded-lg inline-block hover:bg-myRed hover:dark"
-            >
-              Get Started
-            </a>
+            <GetStartedBtn />
           </div>
         </div>
         <figure className="w-full flex items-center justify-center md:justify-end">

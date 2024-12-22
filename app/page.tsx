@@ -11,8 +11,8 @@ const Page = () => {
       <Hero />
       <Section2 />
       <BillsSec />
-      <CardStackDemo /> 
       <Nofees />
+      <CardStackDemo /> 
       <Signup />
     </>
   );

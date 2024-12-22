@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import GetStartedBtn from '../../GetStartedBtn';
 
 const BillsSec = () => {
   return (
-    <section className="flex_center py-[6rem] bg-myRed">
+    <section className="flex_center py-[6rem] bg-lightOrange">
       <div className="my_fixed_width gap-12 md:gap-0 items-center grid md:grid-cols-2">
         <div className="flex flex-col gap-4">
           <h2 className="tracking-[-1px] text-2xl font-semibold md:text-4xl">
@@ -13,12 +14,7 @@ const BillsSec = () => {
             Stay connected with our fast and reliable plans.
           </p>
           <div>
-            <a
-              href="https://eversubapp.vercel.app"
-              className="mt-2 px-4 py-1 border border-2 bg-white border-white rounded-lg inline-block hover:bg-gray-100"
-            >
-              Get Started
-            </a>
+            <GetStartedBtn/>
           </div>
         </div>
         <figure className="w-full flex items-center justify-center md:justify-end">

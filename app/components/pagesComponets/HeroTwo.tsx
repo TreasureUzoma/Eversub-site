@@ -7,7 +7,7 @@ const HeroTwo = ({ pageName = "", bgColor = "" }) => {
       className={`flex ${bgColor} items-center justify-center h-[21rem] md:h-screen md:max-h-[750px] lg:min-h-screen`}
     >
       <motion.h1
-        className="text-[1.5rem] font-semibold max-w-[65%] text-center md:text-[2.2rem]"
+        className="text-[1.5rem] font-semibold max-w-[65%] text-center md:text-[2.2rem] tracking-[-1px]"
         initial="hidden"
         animate="visible"
         variants={heroTextVariants}

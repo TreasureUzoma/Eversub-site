@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image';
-import Link from 'next/link';
+import GetStartedBtn from '../../GetStartedBtn';
 
 const Nofees = () => {
   return (
-    <section className="flex_center py-[6rem] bg-lightOrange">
+    <section className="flex_center py-[6rem] bg-myRed">
       <div className="my_fixed_width gap-12 md:gap-0 items-center grid md:grid-cols-2">
         <div className="flex flex-col gap-4">
           <h2 className="tracking-[-1px] text-2xl font-semibold md:text-4xl">
@@ -16,12 +16,7 @@ const Nofees = () => {
             ease, without any extra costs.
           </p>
           <div>
-            <Link
-              href="#"
-              className="mt-2 px-3 py-1 border border-2 border-myRed rounded-lg inline-block hover:bg-myRed hover:dark"
-            >
-              Learn more
-            </Link>
+            <GetStartedBtn />
           </div>
         </div>
         <figure className="w-full flex items-center justify-center md:justify-end">
