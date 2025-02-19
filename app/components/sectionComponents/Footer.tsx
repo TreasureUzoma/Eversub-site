@@ -137,7 +137,7 @@ const Footer = () => {
           custom={1.2}
           variants={itemVariants}
         >
-          &copy; Copyright 2024,
+          &copy; Copyright {new Date().getFullYear()},
           <br /> All Right Reserved
         </motion.p>
       </div>
